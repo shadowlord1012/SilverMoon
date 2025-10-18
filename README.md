@@ -1,2 +1,2 @@
-# SilverMoon
-Silver Moon RPG Game
+# SliverMoon
+Sliver Moon RPG
