@@ -1,5 +1,8 @@
 package gameEngine;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Level {
 
 	private String name;
@@ -15,6 +18,22 @@ public class Level {
 	public Level(String name) {
 		this.name = name;
 		tileMaps = new java.util.HashMap<>();
+		
+		//creates a list to hold all tile maps
+		List<TileMap> maps = new ArrayList<>();
+		
+		//gets all tile map data from the data loader
+		maps = Global.DATA_LOADER.LoadTileData(name);
+		
+		//checks if the map list is not empty
+		if(!maps.isEmpty()) {
+			
+			//loads each map into the level
+			for(TileMap map : maps) {
+				map.LoadTileSetImage();
+				LoadMap(map);
+			}
+		}
 	}
 	
 	/**

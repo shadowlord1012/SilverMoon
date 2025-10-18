@@ -1,0 +1,4847 @@
+{
+  "MapName": "Map1",
+  "TilesOnMap": [
+    [
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 1.0,
+          "Y": 5.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 8.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 1.0,
+          "Y": 9.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 4.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      }
+    ],
+    [
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 1.0,
+          "Y": 5.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 8.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 1.0,
+          "Y": 9.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 4.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      }
+    ],
+    [
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 1.0,
+          "Y": 3.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 1.0,
+          "Y": 5.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 8.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 1.0,
+          "Y": 9.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 4.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 1.0,
+          "Y": 3.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 8.0,
+          "Y": 3.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      }
+    ],
+    [
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 8.0,
+          "Y": 3.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 1.0,
+          "Y": 5.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 8.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 1.0,
+          "Y": 9.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 4.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      }
+    ],
+    [
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 1.0,
+          "Y": 5.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 8.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 1.0,
+          "Y": 9.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 4.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 1.0,
+          "Y": 3.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      }
+    ],
+    [
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 1.0,
+          "Y": 5.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 8.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 1.0,
+          "Y": 9.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 4.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      }
+    ],
+    [
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 1.0,
+          "Y": 3.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 1.0,
+          "Y": 5.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 3.0,
+          "Y": 8.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 3.0,
+          "Y": 9.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 4.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 8.0,
+          "Y": 3.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      }
+    ],
+    [
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 8.0,
+          "Y": 3.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 3.0,
+          "Y": 3.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 5.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 5.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 3.0,
+          "Y": 3.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      }
+    ],
+    [
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 20.0,
+          "Y": 0.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 20.0,
+          "Y": 1.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 20.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 1.0,
+          "Y": 3.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      }
+    ],
+    [
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 21.0,
+          "Y": 0.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 5.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 5.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 1.0,
+          "Y": 3.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      }
+    ],
+    [
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 8.0,
+          "Y": 3.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 8.0,
+          "Y": 3.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      }
+    ],
+    [
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 17.0,
+          "Y": 0.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 1.0,
+          "Y": 4.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 1.0,
+          "Y": 4.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      }
+    ],
+    [
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 18.0,
+          "Y": 0.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 18.0,
+          "Y": 1.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 18.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 1.0,
+          "Y": 4.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 1.0,
+          "Y": 4.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 8.0,
+          "Y": 3.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      }
+    ],
+    [
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 1.0,
+          "Y": 5.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 9.0,
+          "Y": 5.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 9.0,
+          "Y": 6.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 4.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 1.0,
+          "Y": 3.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 1.0,
+          "Y": 3.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      }
+    ],
+    [
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 1.0,
+          "Y": 5.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 10.0,
+          "Y": 5.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 10.0,
+          "Y": 6.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 4.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 8.0,
+          "Y": 3.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      }
+    ],
+    [
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 5.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 5.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      }
+    ],
+    [
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 8.0,
+          "Y": 3.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 1.0,
+          "Y": 3.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      }
+    ],
+    [
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      }
+    ],
+    [
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 1.0,
+          "Y": 3.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      }
+    ],
+    [
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      },
+      {
+        "Width": 16,
+        "Height": 16,
+        "StoppableSides": 0,
+        "IsDamage": false,
+        "IsActive": false,
+        "TileSetName": "tumblr_pym3d3h2r31ryhg8fo1_1280.png",
+        "LocationOnTileSet": {
+          "X": 0.0,
+          "Y": 2.0
+        }
+      }
+    ]
+  ],
+  "XTiles": 20,
+  "YTiles": 20
+}

@@ -10,7 +10,6 @@ public class Global {
 	public static int TILE_SIZE = 16;  // Default size of the tiles
 	public static final int RENDER_X = (TILE_SIZE*SCALE)*SCREEN_COLUMN;  //default size of screen x
 	public static final int RENDER_Y = (TILE_SIZE*SCALE)*SCREEN_ROW;  // default size of screen y
-	public static java.util.List<TileSet> MASTER_TILESET_LIST;  // Master list of tilesets
 	public static Camera CAMERA = new Camera(); // The Camera that will be defaulted to the world
 	public static float MASTER_VOLUME = 0; // Master Volume amount
 	public static float SOUND_EFFECT_VOLUME= 0; // Sound effect volumes
@@ -19,4 +18,5 @@ public class Global {
 	public static KeyCode MOVEMENT_RIGHT= KeyCode.RIGHT;  // Default right key
 	public static KeyCode MOVEMENT_DOWN = KeyCode.DOWN;  // Default Down Key
 	public static KeyCode ACTION = KeyCode.SPACE;  // Default action key
+	public static final DataLoader DATA_LOADER = new DataLoader(); // Global Data Loader
 }

@@ -22,7 +22,11 @@ public class World {
 	}
 	
 	private void Initialize() {
-		//TODO: Add in dataLoader information here
+		//TODO: Change to a file that has all the levels to upload with.
+		Level levelOne = new Level("levelOne");
+		
+		//Adds the level to the world
+		AddLevel(levelOne);
 	}
 	
 	/**

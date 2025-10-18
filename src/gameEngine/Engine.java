@@ -9,7 +9,7 @@ public class Engine {
 
 	private GraphicsContext gc;
 	private Map<String,World> gameWorldDirectory = new HashMap<>();
-	private String worldName = "Map01";
+	private String worldName = "Map1";
 	public static Audio audio;
 	private Player player;
 	
@@ -21,8 +21,9 @@ public class Engine {
 	}
 	
 	private void Initialize() {
-		
 		//TODO : Add in information from the data loader
+		World mainWorld = new World();
+		gameWorldDirectory.put("Map1", mainWorld);
 	}
 	
 	public void Update() {
@@ -30,7 +31,7 @@ public class Engine {
 		if(gameWorldDirectory.containsKey(worldName)) 
 			gameWorldDirectory.get(worldName).Update(worldName);
 		
-		player.Update(gameWorldDirectory.get(worldName));
+		//player.Update(gameWorldDirectory.get(worldName));
 	}
 	
 	public void Draw() {
@@ -39,6 +40,6 @@ public class Engine {
 		if(gameWorldDirectory.containsKey(worldName))
 			gameWorldDirectory.get(worldName).Draw(gc, worldName);
 		
-		player.Draw(gc);
+		//player.Draw(gc);
 	}
 }
