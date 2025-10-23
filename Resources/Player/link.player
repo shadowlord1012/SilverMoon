@@ -1,0 +1,24 @@
+{
+  "Name": "Link",
+  "Status": {
+    "Health": 10,
+    "Magic": 10,
+    "Level": 1,
+    "Attack": 5,
+    "Defence": 5
+  },
+  "Items": {},
+  "ElementalAlignment": "none",
+  "NumberOfImages": {
+    "X": 9.0,
+    "Y": 8.0
+  },
+  "MovementSpeed": 5,
+  "ImageRectangle": {
+    "x": 0,
+    "y": 0,
+    "width": 40,
+    "height": 40
+  },
+  "SpriteSheetPath": "C:\\Users\\mikek\\Documents\\SilverMoon\\Resources\\Player\\Link.png"
+}

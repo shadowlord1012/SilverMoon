@@ -13,7 +13,6 @@ import javafx.scene.layout.Pane;
 public class Main extends Application {
 	
 	private gameEngine.KeyHandlerController keyBind = new gameEngine.KeyHandlerController();
-	private AnimationTimer gameLoop;
 	private gameEngine.Engine mainGameEngine;
 	private Canvas gameCanvas = new Canvas(gameEngine.Global.RENDER_X,gameEngine.Global.RENDER_Y);
 	private long lastTime = System.nanoTime();
@@ -30,13 +29,16 @@ public class Main extends Application {
 			
 			//Creates a new Plane
 			Pane layerPane = new Pane();
+			
 			layerPane.getChildren().addAll(
 					new gameEngine.Layer(gameEngine.Global.RENDER_X, 
 							gameEngine.Global.RENDER_Y));
+			
 			root.setCenter(layerPane);
 			
 			Scene scene = new Scene(root,gameEngine.Global.RENDER_X, 
 					gameEngine.Global.RENDER_Y);
+			
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			
 			scene.addEventFilter(KeyEvent.KEY_PRESSED, keyEvent  -> {
@@ -47,6 +49,7 @@ public class Main extends Application {
 			});
 			
 			mainGameEngine = new gameEngine.Engine(gameCanvas.getGraphicsContext2D());
+			
 			root.getChildren().add(gameCanvas);
 			primaryStage.setScene(scene);
 			primaryStage.show();
@@ -59,7 +62,7 @@ public class Main extends Application {
 	
 	private void startGame() {
 		
-		gameLoop = new AnimationTimer() {
+		AnimationTimer gameLoop = new AnimationTimer() {
 			@Override
 			public void handle(long now) {
 				delta+=(now-lastTime)/nsPerTick;
@@ -67,8 +70,11 @@ public class Main extends Application {
 				while(delta >= 1)
 				{
 					mainGameEngine.Update();
+					
 					mainGameEngine.Draw();
+					
 					delta-=1;
+					
 				}
 			}
 		};

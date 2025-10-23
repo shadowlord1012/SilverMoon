@@ -23,10 +23,10 @@ public class Player extends Entity{
 			if(KeyHandlerController.Movement[0])
 			{
 				//Keeps the player on the screen and adjusts if needed
-				if(this.Position.Y+this.imgRect.height < 0 && Global.CAMERA.Position.Y <=0)
-					this.Position = new Vector2(this.Position.X, this.Position.Y+this.MovementSpeed());
+				if(this.getPosition().Y+this.getImgRect().height < 0 && Global.CAMERA.Position.Y <=0)
+					this.setPosition( new Vector2(this.getPosition().X, this.getPosition().Y+this.MovementSpeed()));
 				else
-					this.Position = new Vector2(this.Position.X, this.Position.Y-this.MovementSpeed());
+					this.setPosition( new Vector2(this.getPosition().X, this.getPosition().Y-this.MovementSpeed()));
 				
 				//Sets the row in which the Image is located on the sprite sheet
 				this.SetRow(4);
@@ -38,10 +38,10 @@ public class Player extends Entity{
 			else if(KeyHandlerController.Movement[1])
 			{
 				//Keeps the player on the screen and adjusts if needed
-				if(this.Position.X+this.MovementSpeed() < -this.imgRect.width && Global.CAMERA.Position.X <=0)
-					this.Position = new Vector2(this.Position.X+this.MovementSpeed(), this.Position.Y);
+				if(this.getPosition().X+this.MovementSpeed() < -this.getImgRect().width && Global.CAMERA.Position.X <=0)
+					this.setPosition( new Vector2(this.getPosition().X+this.MovementSpeed(), this.getPosition().Y));
 				else
-					this.Position = new Vector2(this.Position.X-this.MovementSpeed(), this.Position.Y);
+					this.setPosition( new Vector2(this.getPosition().X-this.MovementSpeed(), this.getPosition().Y));
 
 				//Sets the row in which the Image is located on the sprite sheet
 				this.SetRow(7);
@@ -52,12 +52,12 @@ public class Player extends Entity{
 			else if(KeyHandlerController.Movement[2])
 			{
 				//Keeps the player on the screen and adjusts if needed
-				if(this.Position.Y + this.MovementSpeed()+(-Global.CAMERA.Position.Y) > 
-				(world.currentLevel("").getTileMap("").getYTiles()*Global.SCALE*Global.TILE_SIZE)-(this.imgRect.height*2) &&
+				if(this.getPosition().Y + this.MovementSpeed()+(-Global.CAMERA.Position.Y) > 
+				(world.currentLevel("levelOne").getTileMap("Map1").getYTiles()*Global.SCALE*Global.TILE_SIZE)-(this.getImgRect().height*2) &&
 				Global.CAMERA.Position.Y < 0)
-					this.Position = new Vector2(this.Position.X, this.Position.Y-this.MovementSpeed());
+					this.setPosition( new Vector2(this.getPosition().X, this.getPosition().Y-this.MovementSpeed()));
 				else 
-					this.Position = new Vector2(this.Position.X, this.Position.Y+this.MovementSpeed());
+					this.setPosition( new Vector2(this.getPosition().X, this.getPosition().Y+this.MovementSpeed()));
 
 				//Sets the row in which the Image is located on the sprite sheet
 				this.SetRow(6);
@@ -68,12 +68,12 @@ public class Player extends Entity{
 			else if(KeyHandlerController.Movement[3])
 			{
 				//Keeps the player on the screen and adjusts if needed
-				if(this.Position.X + this.MovementSpeed()+(-Global.CAMERA.Position.X) >
-				(world.currentLevel("").getTileMap("").getXTiles()*Global.SCALE*Global.TILE_SIZE)-(this.imgRect.width*2) &&
+				if(this.getPosition().X + this.MovementSpeed()+(-Global.CAMERA.Position.X) >
+				(world.currentLevel("levelOne").getTileMap("Map1").getXTiles()*Global.SCALE*Global.TILE_SIZE)-(this.getImgRect().width*2) &&
 				Global.CAMERA.Position.X < 0)
-					this.Position = new Vector2(this.Position.X-this.MovementSpeed(), this.Position.Y);
+					this.setPosition( new Vector2(this.getPosition().X-this.MovementSpeed(), this.getPosition().Y));
 				else 
-					this.Position = new Vector2(this.Position.X+this.MovementSpeed(), this.Position.Y);
+					this.setPosition( new Vector2(this.getPosition().X+this.MovementSpeed(), this.getPosition().Y));
 
 				//Sets the row in which the Image is located on the sprite sheet
 				this.SetRow(5);
@@ -92,23 +92,23 @@ public class Player extends Entity{
 	 */
 	private void cameraMovement() {
 		
-		if(this.Position.X + (this.imgRect.width) > Global.RENDER_X-(this.imgRect.width))
+		if(this.getPosition().X + (this.getImgRect().width) > Global.RENDER_X-(this.getImgRect().width))
 		{
-			this.Position = new Vector2 (this.Position.X-this.MovementSpeed(), this.Position.Y);
+			this.setPosition( new Vector2 (this.getPosition().X-this.MovementSpeed(), this.getPosition().Y));
 			Global.CAMERA.Position.X -= this.MovementSpeed();
 		}
-		if(this.Position.X < 0 && Global.CAMERA.Position.X < 0)
+		if(this.getPosition().X < 0 && Global.CAMERA.Position.X < 0)
 		{
-			this.Position = new Vector2(0,this.Position.Y);
+			this.setPosition( new Vector2(0,this.getPosition().Y));
 			Global.CAMERA.Position.X += this.MovementSpeed();
 		}
-		if(this.Position.Y +(this.imgRect.height) > Global.RENDER_Y-this.imgRect.height) {
-			this.Position = new Vector2(this.Position.X, this.Position.Y-this.MovementSpeed());
+		if(this.getPosition().Y +(this.getImgRect().height) > Global.RENDER_Y-this.getImgRect().height) {
+			this.setPosition( new Vector2(this.getPosition().X, this.getPosition().Y-this.MovementSpeed()));
 			Global.CAMERA.Position.Y -= this.MovementSpeed();
 		}
-		if(this.Position.Y < 0 && Global.CAMERA.Position.Y < 0)
+		if(this.getPosition().Y < 0 && Global.CAMERA.Position.Y < 0)
 		{
-			this.Position = new Vector2 (this.Position.X,0);
+			this.setPosition( new Vector2 (this.getPosition().X,0));
 			Global.CAMERA.Position.Y += this.MovementSpeed();
 		}
 	}

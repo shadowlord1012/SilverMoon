@@ -16,7 +16,8 @@ public class Engine {
 	public Engine(GraphicsContext gc) {
 		audio = new Audio();
 		this.gc = gc;
-		player = new Player();
+		player = Global.DATA_LOADER.LoadPlayerData("Link");
+		player.IsActive = true;
 		Initialize();
 	}
 	
@@ -31,7 +32,9 @@ public class Engine {
 		if(gameWorldDirectory.containsKey(worldName)) 
 			gameWorldDirectory.get(worldName).Update(worldName);
 		
-		//player.Update(gameWorldDirectory.get(worldName));
+		player.Update(gameWorldDirectory.get(worldName));
+		
+		Collision.tileCollision(gameWorldDirectory.get(worldName).currentLevel("levelOne").getTileMap(worldName), player);
 	}
 	
 	public void Draw() {
@@ -40,6 +43,6 @@ public class Engine {
 		if(gameWorldDirectory.containsKey(worldName))
 			gameWorldDirectory.get(worldName).Draw(gc, worldName);
 		
-		//player.Draw(gc);
+		player.Draw(gc);
 	}
 }

@@ -20,6 +20,7 @@ public class TileMap {
 	public String getName() {return name;}
 	public int getYTiles() {return yTiles;}
 	public int getXTiles() {return xTiles;}
+	public Tile[][] getTilesOnMap() {return tilesOnMap;}
 	
 	public TileMap() {
 		xTiles = 0;
@@ -66,9 +67,8 @@ public class TileMap {
 		{
 			for(int y = 0; y < yTiles;y++) {
 				
-				//TODO Add in camera positioning once Camera Class is completed and updated
-				
-				g.drawImage(SwingFXUtils.toFXImage(tilesOnMap[x][y].getImg(), null),
+				//TODO Add in camera positioning once Camera Class is completed and update
+				g.drawImage(tilesOnMap[x][y].getImg(),
 						(x*tilesOnMap[x][y].getWidth()*Global.SCALE)+Global.CAMERA.Position.X,
 						(y*tilesOnMap[x][y].getHeight()*Global.SCALE)+Global.CAMERA.Position.Y,
 						tilesOnMap[x][y].getWidth()*Global.SCALE,

@@ -14,6 +14,28 @@ public class DataLoader {
 		
 	}
 	
+	public Player LoadPlayerData(String playerName) {
+		
+		//creates a player object to hold the data
+		Player player = new Player();
+		
+		//gets the player data file
+		File playerFile = new File("Resources/Player/" + playerName + ".player");
+		
+		//loads the player data from the file
+		try (FileReader reader = new FileReader(playerFile)) {
+			Gson gson = new GsonBuilder().create();
+			player = gson.fromJson(reader, Player.class);
+			
+			player.LoadImage(playerName);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return player;
+	}
+	
 	public List<TileMap> LoadTileData(String levelName) {
 		
 		//creates a list to hold all tile maps

@@ -3,7 +3,6 @@ package gameEngine;
 import javafx.scene.input.KeyCode;
 
 public class Global {
-	public static String INSTALL_LOCATION = "/home/mike/RPG/Sliver_Moon";  // Default Save Location
 	public static int SCALE = 3;  // Scale for the graphics rendering
 	public static int SCREEN_ROW = 16;  // Default Number of Tiles on y axis
 	public static int SCREEN_COLUMN = 12;  // Default Number of Tiles on x axis
