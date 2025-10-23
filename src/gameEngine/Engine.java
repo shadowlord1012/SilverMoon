@@ -12,6 +12,7 @@ public class Engine {
 	private String worldName = "Map1";
 	public static Audio audio;
 	private Player player;
+	private GraphicsController graphics;
 	
 	public Engine(GraphicsContext gc) {
 		audio = new Audio();
@@ -25,6 +26,7 @@ public class Engine {
 		//TODO : Add in information from the data loader
 		World mainWorld = new World();
 		gameWorldDirectory.put("Map1", mainWorld);
+		graphics = new GraphicsController(gameWorldDirectory,player);
 	}
 	
 	public void Update() {
@@ -35,14 +37,13 @@ public class Engine {
 		player.Update(gameWorldDirectory.get(worldName));
 		
 		Collision.tileCollision(gameWorldDirectory.get(worldName).currentLevel("levelOne").getTileMap(worldName), player);
+		
+		graphics.Update(gameWorldDirectory, player);
 	}
 	
 	public void Draw() {
 		gc.clearRect(0, 0, Global.RENDER_X, Global.RENDER_Y);
 		
-		if(gameWorldDirectory.containsKey(worldName))
-			gameWorldDirectory.get(worldName).Draw(gc, worldName);
-		
-		player.Draw(gc);
+		graphics.Draw(gc);
 	}
 }

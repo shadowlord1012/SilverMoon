@@ -46,12 +46,4 @@ public class World {
 		levelList.forEach(e -> e.Update(currentMap));
 	}
 	
-	/**
-	 * Draws the level on the screen
-	 * @param gc
-	 * @param currentMap
-	 */
-	public void Draw(javafx.scene.canvas.GraphicsContext gc, String currentMap) {
-		levelList.forEach(e -> e.DrawTileMap(gc, currentMap));
-	}
 }

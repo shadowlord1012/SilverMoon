@@ -2,11 +2,12 @@ package gameEngine;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class Level {
 
 	private String name;
-	private java.util.Map<String,TileMap> tileMaps;
+	private Map<String,TileMap> tileMaps;
 	
 	public String getLevelName() {return name;}
 	public TileMap getTileMap(String value) {return tileMaps.get(value);}
@@ -53,13 +54,4 @@ public class Level {
 		this.tileMaps.get(currentMap).Update();
 	}
 	
-	/**
-	 * Draws the Levels Maps
-	 * @param gc
-	 * @param currentMap
-	 */
-	public void DrawTileMap(javafx.scene.canvas.GraphicsContext gc, String currentMap) {
-		if(this.tileMaps.containsKey(currentMap))
-			this.tileMaps.get(currentMap).Draw(gc);
-	}
 }

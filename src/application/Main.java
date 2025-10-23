@@ -51,6 +51,7 @@ public class Main extends Application {
 			mainGameEngine = new gameEngine.Engine(gameCanvas.getGraphicsContext2D());
 			
 			root.getChildren().add(gameCanvas);
+			primaryStage.setTitle("Silver Moon");
 			primaryStage.setScene(scene);
 			primaryStage.show();
 			
