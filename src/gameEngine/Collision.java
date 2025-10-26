@@ -20,6 +20,7 @@ public class Collision {
 					if(e[x][y] != null) {
 						if(e[x][y].getStoppableSides() > 0)
 						{
+							//creates a tile rect for the entity to intersect
 							Rectangle tileRec = new Rectangle(
 									(int)((e[x][y].getWidth()*x*Global.SCALE)+Global.CAMERA.Position.X)-(e[x][y].getWidth()*Global.SCALE),
 									(int)((e[x][y].getHeight()*y*Global.SCALE)+Global.CAMERA.Position.Y)-(e[x][y].getHeight()*Global.SCALE),
@@ -48,5 +49,39 @@ public class Collision {
 				}
 		});
 		
+	}
+	
+	public static void teleportLocationCollision(TileMap map, Entity entity) {
+		//creates the entities
+		Rectangle entityRec = new Rectangle(
+				(int)entity.getPosition().X,
+				(int)entity.getPosition().Y,
+				(int)entity.getWidth()-5,
+				(int)entity.getHeight()-5);
+		
+		map.getTileLayers().forEach((layer,e) -> {
+			if(layer == "TransportLayer")
+			{
+				for(int x = 0; x < map.getXTiles(); x++)
+					for(int y=0; y < map.getYTiles(); y++)
+					{
+						if(e[x][y] != null) {
+
+							//creates a tile rect for the entity to intersect
+							Rectangle tileRec = new Rectangle(
+									(int)((e[x][y].getWidth()*x*Global.SCALE)+Global.CAMERA.Position.X)-(e[x][y].getWidth()*Global.SCALE),
+									(int)((e[x][y].getHeight()*y*Global.SCALE)+Global.CAMERA.Position.Y)-(e[x][y].getHeight()*Global.SCALE),
+									(int)e[x][y].getWidth()*Global.SCALE,
+									(int)e[x][y].getHeight()*Global.SCALE);
+							
+							if(entityRec.intersects(tileRec))
+							{
+								System.out.println("Teleport");
+							}
+							
+						}
+					}
+			}
+		});
 	}
 }

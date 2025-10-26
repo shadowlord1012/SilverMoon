@@ -4,6 +4,7 @@ module Sliver_Moon {
 	requires javafx.swing;
 	requires javafx.graphics;
 	requires com.google.gson;
+	requires javafx.fxml;
 	
 	opens application to javafx.graphics, javafx.fxml;
 	opens gameEngine to com.google.gson;

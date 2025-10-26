@@ -23,7 +23,7 @@ public class Entity {
 		private String type;  // Type of the entity
 		
 		@SerializedName("Status")
-		private Map<String,Integer> status;  // all the status for the entity
+		private Map<String,Double> status;  // all the status for the entity
 		
 		@SerializedName("Items")
 		private Map<String, Item> items;
@@ -54,8 +54,8 @@ public class Entity {
 		
 		//Getter Methods
 		public String getName() {return name;} 
-		public int getStatusByName(String value) {return status.get(value);}
-		public Map<String,Integer> getStatusMap() {return status;}
+		public double getStatusByName(String value) {return status.get(value);}
+		public Map<String,Double> getStatusMap() {return status;}
 		public Map<String, Item> getItems() {return items;}
 		public String getAlignment() {return elementalAlignment;}
 		public Rectangle getImgRect() {return imgRect;}
@@ -71,7 +71,7 @@ public class Entity {
 		public void setDirectionFacing(int value) {directionFacing = value;}
 		public void setName(String value) {name = value;}
 		public void setMovementSpeed(int value) {movementSpeed = value;}
-		public void setStatusMap(Map<String,Integer> value) {status = value;}
+		public void setStatusMap(Map<String,Double> value) {status = value;}
 		public void setItems(Map<String, Item> value) {items = value;}
 		public void setElementalAlignment(String value) { elementalAlignment = value;}
 		public void setNumberOfImages(Vector2 value) {numberOfImages = value;}
@@ -129,7 +129,7 @@ public class Entity {
 				}
 		}
 		
-		public boolean setStatusByPair(String key, int value) {
+		public boolean setStatusByPair(String key, double value) {
 			
 			// makes sure the value is getter then 0
 			if(value >= 0) {
