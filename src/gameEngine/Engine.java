@@ -14,16 +14,19 @@ public class Engine implements Runnable{
 	private GraphicsContext gc;
 	private Map<String,World> gameWorldDirectory = new HashMap<>();
 	private String worldName = "Map1";
-	public static Audio audio;
 	private Player player;
 	private GraphicsController graphics;
+	private Audio audio;
 	//private Map<String,Item> itemDirectory = new HashMap<>();
+	private int counter;
 	
 	private volatile boolean running = true;
 	private long lastTime = System.nanoTime();
 	private double nsPerTick = 1000000000/60D;
 	private double delta = 0;
 	
+	public Audio getAudio() {return audio;}
+	public void setAudio(Audio value) {audio = value;}
 	public GraphicsContext getGraphics() {return gc;}
 	public void setGraphics(GraphicsContext value) { gc = value;}
 	
@@ -38,8 +41,6 @@ public class Engine implements Runnable{
 	private void Initialize() {
 		//TODO : Add in information from the data loader
 		
-		//creates the Audio object
-		audio = new Audio();
 				
 		//Loads in the player data
 		player = Global.DATA_LOADER.LoadPlayerData("Link");
@@ -61,8 +62,6 @@ public class Engine implements Runnable{
 
 		}catch(Exception e) {e.printStackTrace();}
 
-		//plays the start music
-		audio.playBGM("Theme.wav");
 		
 	}
 	
@@ -93,6 +92,20 @@ public class Engine implements Runnable{
 		Collision.tileCollision(gameWorldDirectory.get(worldName).currentLevel(Global.CURRENT_LEVEL).getTileMap(Global.TILE_MAP_NAME), player);
 		Collision.teleportLocationCollision(gameWorldDirectory.get(worldName).currentLevel(Global.CURRENT_LEVEL).getTileMap(Global.TILE_MAP_NAME), player);
 		
+		counter++;
+		if(counter >= 50)
+			counter = 50;
+		
+		if(KeyHandlerController.UpDown[0] && counter == 50) {
+			player.changeStatusByPair("magiccurrent", -0.5);
+			counter = 0;
+		}
+		if(KeyHandlerController.UpDown[1]&& counter == 50) {
+			player.changeStatusByPair("magiccurrent", 0.5);
+			counter = 0;
+		}
+			
+		
 		//updates the graphic controller
 		graphics.Update(gameWorldDirectory, player);
 		
@@ -112,6 +125,12 @@ public class Engine implements Runnable{
 	@Override
 	public void run() {
 		
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		// TODO Auto-generated method stub
 		while(running) {
 			long now = System.nanoTime();

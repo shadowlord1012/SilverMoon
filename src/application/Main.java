@@ -5,8 +5,11 @@ import java.util.concurrent.Future;
 
 import javax.imageio.ImageIO;
 
+import gameEngine.Audio;
 import gameEngine.Engine;
+import gameEngine.FadeInOut;
 import gameEngine.Global;
+import gameEngine.KeyHandlerController;
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.embed.swing.SwingFXUtils;
@@ -15,11 +18,10 @@ import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.BorderPane;
-
-
-/*
- * java --module-path C:\javafx-sdk-21.0.6\lib --add-modules=javafx.controls,javafx.swing,javafx.graphics,javafx.fxml -jar C:\Users\mikek\Documents\SilverMoon\game.jar
- */
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
+import javafx.scene.text.Text;
 
 
 public class Main extends Application {
@@ -32,13 +34,20 @@ public class Main extends Application {
     private int frameCount = 0;
     private double fps = 0.0;
     Future<Engine> gameEngineLoading;
+    private boolean onlyOnce = false;
+    private boolean engineLoaded = false;
+    private Audio audio = new Audio();
+	private Text text = new Text("Start");
+	private BorderPane root;
 	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
 			
 			//Sets the pane in which everything rests on
-			BorderPane root = new BorderPane();			
+			root = new BorderPane();			
+			
+			root.setStyle("-fx-background-color: black;");
 			
 			//New Canvas Object
 			gameCanvas = new Canvas();
@@ -49,13 +58,17 @@ public class Main extends Application {
 			//Binds the width of the canvas to the width of the parent
 			gameCanvas.widthProperty().bind(root.widthProperty());
 			gameCanvas.heightProperty().bind(root.heightProperty());
-			
-			
-			
+
+			//Sets the Start text information
+			text.setX((gameEngine.Global.RENDER_X/2)-25);
+			text.setY(gameEngine.Global.RENDER_Y-100);
+			text.setFill(Color.WHITE);
+			text.setFont(Font.font("Times New Roman",FontWeight.BOLD,30));
 			
 			//Creates the scene in where everything takes place
 			Scene scene = new Scene(root,gameEngine.Global.RENDER_X, 
 					gameEngine.Global.RENDER_Y);
+
 			
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			
@@ -68,34 +81,19 @@ public class Main extends Application {
 				keyBind.keyRealesed(keyEvent);
 			});
 			
+			gameCanvas.getGraphicsContext2D().drawImage(
+					SwingFXUtils.toFXImage(ImageIO.read(new File("Resources/Images/Title Screen Image EN.jpg")),null),
+					0, 0, gameCanvas.getWidth(), gameCanvas.getHeight());
+			
+			root.getChildren().add(text);
+			
 			//Sets the primary stage and displays it
 			primaryStage.setTitle("Silver Moon");
 			primaryStage.setScene(scene);
 			primaryStage.show();
-
-			gameEngineLoading = Global.DATA_LOADER.loadingEngine(gameCanvas);
-			
-			System.out.println("Main stage Complete");
-			
-			gameCanvas.getGraphicsContext2D().drawImage(
-					SwingFXUtils.toFXImage(ImageIO.read(new File("Resources/Images/Title Screen Image EN.jpg")),null),
-					0, 0, Global.RENDER_X, Global.RENDER_Y);
-			
-			try {
-				mainGameEngine = gameEngineLoading.get();
-				System.out.println("Engine Loaded");
-			}catch (Exception e) {
-				e.printStackTrace();
-			}
-			finally {
-				Global.DATA_LOADER.shutdown();
-			}
-			
-			gameThread = new Thread(mainGameEngine,"GameEngineThread");
-			gameThread.setDaemon(true);
-			gameThread.start();
-			//Starts the game
+			audio.playBGM("Theme.wav");
 			startGame(primaryStage);
+			//Starts the game
 			
 			
 		} catch(Exception e) {
@@ -128,23 +126,71 @@ public class Main extends Application {
 	
 	private void startGame(Stage stage) {
 		
+		
 		AnimationTimer gameLoop = new AnimationTimer() {
 			@Override
 			public void handle(long now) {
 				
 				ShowFPS(now);
+
+				
+				if(!onlyOnce) {						
+					
+					if(gameEngineLoading.isDone()&& !engineLoaded)
+					{
+						engineLoaded=true;
+						System.out.println("Engine Loaded");
+					}
+					if(gameEngineLoading.isDone() && KeyHandlerController.Action)
+					{
+						
+						FadeInOut.fadeOutIn(gameCanvas, 1000,500);
+						
+						try {
+							mainGameEngine = gameEngineLoading.get();
+						}catch (Exception e) {
+							e.printStackTrace();
+						}
+						finally {
+							Global.DATA_LOADER.shutdown();
+						}
+						
+						audio.stop();
+						audio.shutdown();
+						
+						root.getChildren().remove(text);
+						
+						
+						mainGameEngine.setAudio(audio);
+						
+						mainGameEngine.getAudio().playBGM("FieldOne.wav");
+						onlyOnce = true;
+						gameThread = new Thread(mainGameEngine,"GameEngineThread");
+						gameThread.setDaemon(true);
+						gameThread.start();
+						
+					}
+				}
 				
                 stage.setTitle(String.format("Silver Moon : %.2f FPS", fps));
 			}
 		};
 		
 		gameLoop.start();
+
+		gameEngineLoading = Global.DATA_LOADER.loadingEngine(gameCanvas);
+
+		FadeInOut.fadeTextInOut(text, 1.5);
 	}
 	
 	@Override
 	public void stop() throws Exception{
-		if(mainGameEngine != null)
+		audio.stop();
+		audio.shutdown();
+		if(mainGameEngine != null) {
 			mainGameEngine.stop();
+			mainGameEngine.getAudio().stop();
+		}
 		super.stop();
 	}
 	

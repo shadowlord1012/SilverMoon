@@ -42,7 +42,6 @@ public class DataLoader {
 	public Future<World> loadingWorld(){
 		
 		Callable<World> loadingWorld = () -> {
-			System.out.println("Loading World");
 			World world = new World();
 			return world;
 		};
@@ -54,7 +53,6 @@ public class DataLoader {
 	{
 		
 		Callable<List<TileMap>> loadingMap = () -> {
-			System.out.println("Loading Tile Maps...");
 			//creates a list to hold all tile maps
 			List<TileMap> tileMap = new ArrayList<>();
 			
@@ -78,7 +76,6 @@ public class DataLoader {
 				}
 			}
 			
-			System.out.println("Tile Maps loaded!");
 			return tileMap;
 		};
 		

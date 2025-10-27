@@ -16,7 +16,7 @@ public class Audio {
 		
 	}
 	public void playBGM(String name) {
-		if(this.clip != null)
+		if(clip != null)
 			stop();
 		setFileBGM(name);
 		fc.setValue(Global.MASTER_VOLUME);
@@ -56,5 +56,9 @@ public class Audio {
 	
 	public void stop() {
 		clip.stop();
+	}
+	
+	public void shutdown() {
+		clip.close();
 	}
 }

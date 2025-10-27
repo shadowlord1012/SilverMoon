@@ -48,7 +48,7 @@ public class Entity {
 		@SerializedName("SpriteSheetPath")
 		private String spriteSheetPath;
 		
-		private transient Vector2 Position = new Vector2(100,100); // Position of the entity
+		private transient Vector2 Position = new Vector2(200,200); // Position of the entity
 		public transient boolean isMoving;  // is the entity Moving 
 		public transient boolean IsActive;  // is the entity alive 
 		
@@ -148,17 +148,39 @@ public class Entity {
 		 * @param value
 		 * @return if it was completed correctly
 		 */
-		public boolean changeStatusByPair(String key, int value) {
-			
-			//makes sure the value is getter then 0
-			if(value >=0) {
-				//Makes sure that status is in the map
-				if(status.containsKey(key.toLowerCase())) {
+		public void changeStatusByPair(String key, double value) {
+			if(key == "magiccurrent") {
+				if(status.get(key)+value > status.get("Magic"))
+				{
+					status.put(key, status.get("Magic"));
+				}
+				else if(status.get(key)+value < 0)
+				{
+					status.put(key,0.0);
+				}
+				else {
 					status.put(key, status.get(key)+value);
-					return true;
 				}
 			}
-			return false;
+			else if(key == "healthcurrent")
+			{
+				if(status.get(key)+value > status.get("Health"))
+				{
+					status.put(key, status.get("Health"));
+				}
+				else if(status.get(key)+value < 0)
+				{
+					status.put(key,0.0);
+				}
+				else {
+					status.put(key, status.get(key)+value);
+				}
+			}
+			else {
+				if(status.containsKey(key)) {
+					status.put(key, status.get(key)+value);
+				}
+			}
 		}
 	/**
 	 * Updates the entity
