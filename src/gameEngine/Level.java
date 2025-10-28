@@ -36,8 +36,10 @@ public class Level {
 				for(TileMap map : maps) {
 					map.LoadTileSetImage();
 					LoadMap(map);
+					System.out.printf("Tile Map %s loaded \n", map.getName());
 				}
 			}
+			System.out.printf("%s Loaded \n", name);
 		} catch(Exception e) {e.printStackTrace();}
 	}
 	/**

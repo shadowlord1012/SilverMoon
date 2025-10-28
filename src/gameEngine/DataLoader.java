@@ -23,9 +23,58 @@ public class DataLoader {
 		
 	}
 	
+	public Future<List<Item>> loadItems(){
+		
+		//creates a call function to be executed at a later time
+		Callable<List<Item>> loadingItems = () -> {
+			
+			//creates an list of all the items
+			List<Item> itemList = new ArrayList<>();
+			
+			//gets all the files in the Item directory
+			File directory = new File("Resources/Items/");
+			
+			//gets all the files in that directory
+			File[] files = directory.listFiles((dir,name) -> name.toLowerCase().endsWith(".item"));
+			
+			//Makes sure the list is not empty or null
+			if(files != null)
+				
+				//for every file in the directory
+				for(File itemFile : files)
+				{
+					// read in the file
+					try (FileReader reader = new FileReader(itemFile)) {
+						
+						//create the Gson object 
+						Gson gson = new GsonBuilder().create();
+						
+						//add to the item to the list though the converting of a json file to item class through gson
+						itemList.add(gson.fromJson(reader, Item.class));
+						
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				}
+			
+			//returns the item list
+			return itemList;
+		};
+		
+		//returns the call function
+		return executor.submit(loadingItems);
+		
+	}
+	
 	public Future<Engine> loadingEngine(Canvas canvas){
+		
+		//creates a call function to be executed at a later time
 		Callable<Engine> loadingEngine = () ->{
+			
+			//creates the game engine
 			Engine game = new Engine(canvas.getGraphicsContext2D());
+			
+			//Adds the appropriate listeners that are needed
 			canvas.widthProperty().addListener(obs -> {
 				game.setGraphicsContext(canvas);
 			});
@@ -33,19 +82,28 @@ public class DataLoader {
 			canvas.heightProperty().addListener(obs -> {
 				game.setGraphicsContext(canvas);
 			});
+			
+			//returns the game
 			return game;
 		};
 		
+		//returns the call function
 		return executor.submit(loadingEngine);
 	}
 	
 	public Future<World> loadingWorld(){
 		
+		//creates a call function to be executed at a later time
 		Callable<World> loadingWorld = () -> {
+			
+			//creates the world object
 			World world = new World();
+			
+			//returns the world object
 			return world;
 		};
 		
+		//returns the call function
 		return executor.submit(loadingWorld);
 	}
 	
