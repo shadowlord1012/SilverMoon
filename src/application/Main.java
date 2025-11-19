@@ -12,8 +12,10 @@ import gameEngine.Global;
 import gameEngine.KeyHandlerController;
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.input.KeyEvent;
@@ -36,8 +38,13 @@ public class Main extends Application {
     Future<Engine> gameEngineLoading;
     private boolean onlyOnce = false;
     private boolean engineLoaded = false;
+    private boolean runGame = false;
+    private int[] selectedValue = {0,0};
+    private int[] delayCounter = {0,0};
     private Audio audio = new Audio();
 	private Text text = new Text("Start");
+	private Text quitText = new Text("Quit");
+	private FadeInOut fadeInOut = new FadeInOut();
 	private BorderPane root;
 	
 	@Override
@@ -58,12 +65,8 @@ public class Main extends Application {
 			//Binds the width of the canvas to the width of the parent
 			gameCanvas.widthProperty().bind(root.widthProperty());
 			gameCanvas.heightProperty().bind(root.heightProperty());
-
-			//Sets the Start text information
-			text.setX((gameEngine.Global.RENDER_X/2)-25);
-			text.setY(gameEngine.Global.RENDER_Y-100);
-			text.setFill(Color.WHITE);
-			text.setFont(Font.font("Times New Roman",FontWeight.BOLD,30));
+			
+			SetTextInformation();
 			
 			//Creates the scene in where everything takes place
 			Scene scene = new Scene(root,gameEngine.Global.RENDER_X, 
@@ -86,7 +89,9 @@ public class Main extends Application {
 					0, 0, gameCanvas.getWidth(), gameCanvas.getHeight());
 			
 			root.getChildren().add(text);
+			root.getChildren().add(quitText);
 			
+			primaryStage.setOnCloseRequest(this::OnClose);
 			//Sets the primary stage and displays it
 			primaryStage.setTitle("Silver Moon");
 			primaryStage.setScene(scene);
@@ -99,6 +104,20 @@ public class Main extends Application {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	private void SetTextInformation() {
+		//Sets the Start text information
+		text.setX((gameEngine.Global.RENDER_X/2)-25);
+		text.setY(gameEngine.Global.RENDER_Y-100);
+		text.setFill(Color.WHITE);
+		text.setFont(Font.font("Times New Roman",FontWeight.BOLD,30));
+		
+		//Sets the Start text information
+		quitText.setX((gameEngine.Global.RENDER_X/2)-25);
+		quitText.setY(gameEngine.Global.RENDER_Y-75);
+		quitText.setFill(Color.WHITE);
+		quitText.setFont(Font.font("Times New Roman",FontWeight.BOLD,30));
 	}
 	
 	/***
@@ -136,40 +155,7 @@ public class Main extends Application {
 				
 				if(!onlyOnce) {						
 					
-					if(gameEngineLoading.isDone()&& !engineLoaded)
-					{
-						engineLoaded=true;
-						System.out.println("Engine Loaded");
-					}
-					if(gameEngineLoading.isDone() && KeyHandlerController.Action)
-					{
-						
-						FadeInOut.fadeOutIn(gameCanvas, 1000,500);
-						
-						try {
-							mainGameEngine = gameEngineLoading.get();
-						}catch (Exception e) {
-							e.printStackTrace();
-						}
-						finally {
-							Global.DATA_LOADER.shutdown();
-						}
-						
-						audio.stop();
-						audio.shutdown();
-						
-						root.getChildren().remove(text);
-						
-						
-						mainGameEngine.setAudio(audio);
-						
-						mainGameEngine.getAudio().playBGM("FieldOne.wav");
-						onlyOnce = true;
-						gameThread = new Thread(mainGameEngine,"GameEngineThread");
-						gameThread.setDaemon(true);
-						gameThread.start();
-						
-					}
+					handling();
 				}
 				
                 stage.setTitle(String.format("Silver Moon : %.2f FPS", fps));
@@ -180,18 +166,97 @@ public class Main extends Application {
 
 		gameEngineLoading = Global.DATA_LOADER.loadingEngine(gameCanvas);
 
-		FadeInOut.fadeTextInOut(text, 1.5);
+		//starts the fade in and out on text
+		fadeInOut.fadeTextInOut(text, 1.5);
 	}
 	
+	private void changeText() {
+		
+		//Just so the user can not spam the action button allow a count delay to happen
+		delayCounter[0]++;
+		if(delayCounter[0] >=50)
+			delayCounter[0] = 50;
+		
+		//what is to be changed
+		selectedValue[0]++;
+		switch(selectedValue[0])
+		{
+		case 0:
+			fadeInOut.stop();
+			fadeInOut.fadeTextInOut(text, 1.5);
+			break;
+		case 1:
+			fadeInOut.stop();
+			fadeInOut.fadeTextInOut(quitText, 1.5);;
+			break;
+		}
+		
+		//changes what is being selected on the screen for fade in or out
+		if(selectedValue[0] >= selectedValue[1])
+			selectedValue[0] = 0;
+		
+		if(selectedValue[0] < 0)
+			selectedValue[0] = selectedValue[1];
+	}
+	
+	private void handling() {
+		
+		if(KeyHandlerController.Action && !runGame && delayCounter[0] == 50) {
+			text.setText("Load");
+		}
+		
+		if(gameEngineLoading.isDone()&& !engineLoaded)
+		{
+			engineLoaded=true;
+			System.out.println("Engine Loaded");
+		}
+		
+		
+		if(gameEngineLoading.isDone() && KeyHandlerController.Action && runGame)
+		{
+			
+			fadeInOut.fadeOutIn(gameCanvas, 1000,500);
+			
+			try {
+				mainGameEngine = gameEngineLoading.get();
+			}catch (Exception e) {
+				e.printStackTrace();
+			}
+			finally {
+				Global.DATA_LOADER.shutdown();
+			}
+			
+			audio.stop();
+			audio.shutdown();
+			
+			root.getChildren().remove(text);
+			
+			
+			mainGameEngine.setAudio(audio);
+			
+			mainGameEngine.getAudio().playBGM("FieldOne.wav");
+			onlyOnce = true;
+			gameThread = new Thread(mainGameEngine,"GameEngineThread");
+			gameThread.setDaemon(true);
+			gameThread.start();
+			
+		}
+	}
 	@Override
 	public void stop() throws Exception{
 		audio.stop();
 		audio.shutdown();
+		Global.DATA_LOADER.shutdown();		
 		if(mainGameEngine != null) {
 			mainGameEngine.stop();
 			mainGameEngine.getAudio().stop();
 		}
 		super.stop();
+	}
+	
+	private void OnClose(WindowEvent event) {
+		Platform.exit();
+		System.exit(0);
 	}
 	
 	public static void main(String[] args) {

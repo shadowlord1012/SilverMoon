@@ -22,7 +22,6 @@ public class DataLoader {
 	public DataLoader() {
 		
 	}
-	
 	public Future<List<Item>> loadItems(){
 		
 		//creates a call function to be executed at a later time
@@ -164,6 +163,6 @@ public class DataLoader {
 	}
 	
 	public void shutdown() {
-		executor.shutdown();
+		executor.shutdownNow();
 	}
 }

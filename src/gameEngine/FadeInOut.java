@@ -7,15 +7,23 @@ import javafx.util.Duration;
 
 public class FadeInOut {
 
+	private FadeTransition fadeTransition;
+	
+	public FadeTransition getFadeTransition() {return fadeTransition;}
+	
+	public void stop() {
+		fadeTransition.stop();
+	}
+	
 	/**
 	 * Creates and starts a fade-in and fade-out loop for a JavaFX Text node.
 	 * * @param textNode The Text object to animate.
 	 * @param durationInSeconds The time for one direction of the fade (e.g., fade-in only).
 	 */
-	public static void fadeTextInOut(Text textNode, double durationInSeconds) {
+	public void fadeTextInOut(Text textNode, double durationInSeconds) {
 		
 	    // Create a FadeTransition instance
-	    FadeTransition fadeTransition = new FadeTransition(Duration.seconds(durationInSeconds), textNode);
+	    fadeTransition = new FadeTransition(Duration.seconds(durationInSeconds), textNode);
 
 	    // Set the starting opacity value (fully visible)
 	    fadeTransition.setFromValue(1.0); 
@@ -34,7 +42,7 @@ public class FadeInOut {
 	    fadeTransition.play();
 	}
 	
-	public static void fadeOutIn(Node node, long durationMillis, long holdTimeMillis) {
+	public void fadeOutIn(Node node, long durationMillis, long holdTimeMillis) {
 	    // 1. Fade In Transition (from invisible to fully opaque)
 	    FadeTransition fadeIn = new FadeTransition(Duration.millis(durationMillis), node);
 	    fadeIn.setFromValue(1.0); // Start at fully transparent
