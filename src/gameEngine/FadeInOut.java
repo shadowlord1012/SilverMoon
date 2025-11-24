@@ -11,8 +11,9 @@ public class FadeInOut {
 	
 	public FadeTransition getFadeTransition() {return fadeTransition;}
 	
-	public void stop() {
+	public void stop(Node node) {
 		fadeTransition.stop();
+		node.setOpacity(1.0); // Reset opacity to fully visible
 	}
 	
 	/**

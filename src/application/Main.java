@@ -39,7 +39,7 @@ public class Main extends Application {
     private boolean onlyOnce = false;
     private boolean engineLoaded = false;
     private boolean runGame = false;
-    private int[] selectedValue = {0,0};
+    private int[] selectedValue = {0,1};
     private int[] delayCounter = {0,0};
     private Audio audio = new Audio();
 	private Text text = new Text("Start");
@@ -172,22 +172,16 @@ public class Main extends Application {
 	
 	private void changeText() {
 		
-		//Just so the user can not spam the action button allow a count delay to happen
-		delayCounter[0]++;
-		if(delayCounter[0] >=50)
-			delayCounter[0] = 50;
-		
 		//what is to be changed
-		selectedValue[0]++;
 		switch(selectedValue[0])
 		{
 		case 0:
-			fadeInOut.stop();
+			fadeInOut.stop(quitText);
 			fadeInOut.fadeTextInOut(text, 1.5);
 			break;
 		case 1:
-			fadeInOut.stop();
-			fadeInOut.fadeTextInOut(quitText, 1.5);;
+			fadeInOut.stop(text);
+			fadeInOut.fadeTextInOut(quitText, 1.5);
 			break;
 		}
 		
@@ -201,8 +195,36 @@ public class Main extends Application {
 	
 	private void handling() {
 		
+		//Just so the user can not spam the action button allow a count delay to happen
+				delayCounter[0]++;
+				if(delayCounter[0] >=50)
+					delayCounter[0] = 50;
+				
+		
+		if(KeyHandlerController.Movement[0] && delayCounter[0] == 50)
+		{
+			selectedValue[0]--;
+			System.out.println("Up Pressed");
+			changeText();
+			delayCounter[0]=0;
+		}
+		
+		if(KeyHandlerController.Movement[2] && delayCounter[0] == 50)
+		{
+			selectedValue[0]++;
+			System.out.println("Down Pressed");
+			changeText();
+			delayCounter[0]=0;
+		}
+		
+		if(KeyHandlerController.Action && text.getText().equals("Load") && !runGame && delayCounter[0] == 50) {
+			runGame = true;
+			delayCounter[0]=0;
+		}
+		
 		if(KeyHandlerController.Action && !runGame && delayCounter[0] == 50) {
 			text.setText("Load");
+			delayCounter[0]=0;
 		}
 		
 		if(gameEngineLoading.isDone()&& !engineLoaded)
@@ -230,6 +252,7 @@ public class Main extends Application {
 			audio.shutdown();
 			
 			root.getChildren().remove(text);
+			root.getChildren().remove(quitText);
 			
 			
 			mainGameEngine.setAudio(audio);

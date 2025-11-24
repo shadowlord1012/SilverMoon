@@ -1,6 +1,8 @@
 package gameEngine;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Future;
 
@@ -13,6 +15,7 @@ public class Engine implements Runnable{
 
 	private GraphicsContext gc;
 	private Map<String,World> gameWorldDirectory = new HashMap<>();
+	private List<Abilities> abilityDirectory = new ArrayList<Abilities>();
 	private String worldName = "Map1";
 	private Player player;
 	private GraphicsController graphics;
@@ -41,6 +44,7 @@ public class Engine implements Runnable{
 	private void Initialize() {
 		//TODO : Add in information from the data loader
 		
+		Future<List<Abilities>> abilitiesListLoading = Global.DATA_LOADER.loadAbilities();
 				
 		//Loads in the player data
 		player = Global.DATA_LOADER.LoadPlayerData("Link");
@@ -50,6 +54,11 @@ public class Engine implements Runnable{
 		player.getStatusMap().put("healthcurrent",  10.0);
 				
 		Future<World> worldLoading = Global.DATA_LOADER.loadingWorld();
+		
+		try {
+			abilityDirectory = abilitiesListLoading.get();
+			System.out.println("Abilities Loaded: " + abilityDirectory.size());
+		}catch(Exception e) {e.printStackTrace();}
 		
 		try {
 			World world = worldLoading.get();

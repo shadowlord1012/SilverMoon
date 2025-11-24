@@ -7,6 +7,7 @@ public class KeyHandlerController {
 	public static boolean[] Movement = {false,false,false,false};
 	public static boolean Action = false;
 	public static boolean[] UpDown = {false,false};
+	public static boolean[] ScreenMovement = {false,false}; 
 	
 	
 	public void keyPressed(KeyEvent e) {

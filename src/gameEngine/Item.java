@@ -20,14 +20,20 @@ public class Item {
 	@SerializedName("Effects")
 	private StatusEffects statusEffect;
 	
+	@SerializedName("requirements")
+	private Requirements requirements;
+	
 	private transient Image img;
 	
 	public String getName() {return name;}
 	public int getQuantity() {return quantity;}
 	public StatusEffects getEffects() {return statusEffect;}
+	public Requirements getRequirements() { return requirements;}
+	public Image getImage() {return img;}
 	
 	public void setName(String value) {name = value;}
 	public void setQuantity(int value) {quantity = value;}
+	public void addQuantity(int value) {quantity += value;}
 	public void setEffects(String name, String target, int amount, long duration) {
 		statusEffect.setEffect(name,target,amount,duration);
 	}

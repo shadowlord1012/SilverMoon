@@ -19,6 +19,8 @@ public class Global {
 	public static KeyCode ACTION = KeyCode.SPACE;  // Default action key
 	public static KeyCode DEBUG_UP = KeyCode.I;
 	public static KeyCode DEBUG_DOWN = KeyCode.O;
+	public static KeyCode SCREEN_MOVE_LEFT = KeyCode.Q; // Screen move left key
+	public static KeyCode SCREEN_MOVE_RIGHT = KeyCode.E; // Screen move right key
 	public static final DataLoader DATA_LOADER = new DataLoader(); // Global Data Loader
 	public static String CURRENT_LEVEL = "levelOne";
 	public static String TILE_MAP_NAME	 = "Map1";

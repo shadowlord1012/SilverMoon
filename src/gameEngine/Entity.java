@@ -5,6 +5,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.imageio.ImageIO;
@@ -51,6 +52,15 @@ public class Entity {
 		private transient Vector2 Position = new Vector2(200,200); // Position of the entity
 		public transient boolean isMoving;  // is the entity Moving 
 		public transient boolean IsActive;  // is the entity alive 
+		
+		@SerializedName("AbilityTotal")
+		private int abilityTotal;
+		
+		@SerializedName("AbilityNames")
+		private String[] abilityNames;
+		
+		//The total number of abilities the entity has
+		private transient Abilities[] usableAbilities = new Abilities[abilityTotal];
 		
 		//Getter Methods
 		public String getName() {return name;} 
@@ -142,6 +152,17 @@ public class Entity {
 			return false;
 		}
 		
+		public void loadAbilities(List<Abilities> allAbilities) {
+			allAbilities.forEach(ability -> {
+				for(int i = 0; i < abilityNames.length; i++) {
+					if(ability.getName().toLowerCase() == abilityNames[i].toLowerCase()) {
+						usableAbilities[i] = ability;
+					}
+				}
+			});
+		}
+		
+		
 		/**
 		 * Changes a status by key 
 		 * @param key
@@ -199,6 +220,12 @@ public class Entity {
 		else {
 			this.renderingCounter[1] = 0;
 		}
+		
+		for(Abilities ability : usableAbilities){
+			if(ability != null) {
+				ability.Update(this);
+			}
+		}
 	}
 	
 	/**
@@ -223,6 +250,14 @@ public class Entity {
 					this.imgRect.width*Global.SCALE,
 					this.imgRect.height*Global.SCALE);
 			
+		}
+		
+		for(Abilities ability : usableAbilities){
+			if(ability != null) {
+				if(ability.IsActive()) {
+					ability.Draw(gc);
+				}
+			}
 		}
 	}
 }

@@ -22,6 +22,49 @@ public class DataLoader {
 	public DataLoader() {
 		
 	}
+	
+	public Future<List<Abilities>> loadAbilities(){
+		
+		//creates a call function to be executed at a later time
+		Callable<List<Abilities>> loadingAbilities = () -> {
+			
+			//creates an list of all the abilities
+			List<Abilities> abilityList = new ArrayList<>();
+			
+			//gets all the files in the Abilities directory
+			File directory = new File("Resources/Abilities/");
+			
+			//gets all the files in that directory
+			File[] files = directory.listFiles((dir,name) -> name.toLowerCase().endsWith(".ability"));
+			
+			//Makes sure the list is not empty or null
+			if(files != null)
+				
+				//for every file in the directory
+				for(File abilityFile : files)
+				{
+					// read in the file
+					try (FileReader reader = new FileReader(abilityFile)) {
+						
+						//create the Gson object 
+						Gson gson = new GsonBuilder().create();
+						
+						//add to the ability to the list though the converting of a json file to ability class through gson
+						abilityList.add(gson.fromJson(reader, Abilities.class));
+						
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				}
+			
+			//returns the ability list
+			return abilityList;
+		};
+		
+		//returns the call function
+		return executor.submit(loadingAbilities);
+	}
+	
 	public Future<List<Item>> loadItems(){
 		
 		//creates a call function to be executed at a later time
