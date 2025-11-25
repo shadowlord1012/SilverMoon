@@ -27,10 +27,10 @@ public class StatusScreen {
 	public void OnChange(StatusScreen current, StatusScreen target) {
 		target.setOpen(true);
 		current.setOpen(false);
-		if(current.isSelecting) {
-			target.selectedItem = current.selectedItem;
-			current.selectedItem = null;
-			target.isSelecting = true;
+		if(current.isSelecting()) {
+			target.setSelectedItem(current.getSelectedItem());
+			current.setSelectedItem(null);
+			target.setSelecting(true);
 		}
 	}
 	
@@ -44,48 +44,48 @@ public class StatusScreen {
 			if(KeyHandlerController.Movement[0] && delayCounter.X == delayCounter.Y)
 			{
 				delayCounter.X = 0;
-				currentSelected.Y--;
-				if(currentSelected.Y < 0)
-					currentSelected.Y = getMaxSelected().Y;
+				getCurrentSelected().Y--;
+				if(getCurrentSelected().Y < 0)
+					getCurrentSelected().Y = getMaxSelected().Y;
 			}
 			if(KeyHandlerController.Movement[1] && delayCounter.X == delayCounter.Y)
 			{
 				delayCounter.X = 0;
-				currentSelected.X--;
-				if(currentSelected.X < 0)
-					currentSelected.X = getMaxSelected().X;
+				getCurrentSelected().X--;
+				if(getCurrentSelected().X < 0)
+					getCurrentSelected().X = getMaxSelected().X;
 			}
 			if(KeyHandlerController.Movement[2] && delayCounter.X == delayCounter.Y)
 			{
 				delayCounter.X = 0;
-				currentSelected.Y++;
-				if(currentSelected.Y > getMaxSelected().Y)
-					currentSelected.Y = 0;
+				getCurrentSelected().Y++;
+				if(getCurrentSelected().Y > getMaxSelected().Y)
+					getCurrentSelected().Y = 0;
 			}
 			if(KeyHandlerController.Movement[3] && delayCounter.X == delayCounter.Y)
 			{
 				delayCounter.X = 0;
-				currentSelected.X++;
-				if(currentSelected.X > getMaxSelected().X)
-					currentSelected.X = 0;
+				getCurrentSelected().X++;
+				if(getCurrentSelected().X > getMaxSelected().X)
+					getCurrentSelected().X = 0;
 			}
 			if(KeyHandlerController.Action && delayCounter.X == delayCounter.Y) {
-				if(!isSelecting) {
-					selectedItem = getItemSlots()[(int) currentSelected.X][(int) currentSelected.Y];
-					getItemSlots()[(int) currentSelected.X][(int) currentSelected.Y] = null;
-					isSelecting = true;
+				if(!isSelecting()) {
+					setSelectedItem(getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y]);
+					getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y] = null;
+					setSelecting(true);
 				}
-				if(isSelecting) {
-					getItemSlots()[(int) currentSelected.X][(int) currentSelected.Y] = selectedItem;
-					selectedItem = null;
-					isSelecting = false;
+				if(isSelecting()) {
+					getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y] = getSelectedItem();
+					setSelectedItem(null);
+					setSelecting(false);
 				}
 				delayCounter.X = 0;
 			}
 			
-			position[1] = new Vector2(currentSelected.X*widthOffset+startingPosition.X,
-					currentSelected.Y*heightOffset+startingPosition.Y);
-			if(isSelecting)
+			position[1] = new Vector2(getCurrentSelected().X*widthOffset+startingPosition.X,
+					getCurrentSelected().Y*heightOffset+startingPosition.Y);
+			if(isSelecting())
 				position[2] = new Vector2(position[1].X+getCursorImage().getWidth()+5,
 					position[1].Y+getCursorImage().getHeight()+5);
 		}
@@ -100,9 +100,9 @@ public class StatusScreen {
 		if(getCursorImage() != null)
 			gc.drawImage(getCursorImage(), position[1].X, position[1].Y,
 				getCursorImage().getWidth(), getCursorImage().getHeight());
-		if(isSelecting) {
-			if(selectedItem != null)
-				gc.drawImage(selectedItem.getImage(), position[2].X, position[2].Y,
+		if(isSelecting()) {
+			if(getSelectedItem() != null)
+				gc.drawImage(getSelectedItem().getImage(), position[2].X, position[2].Y,
 					20,20);
 		}
 	}
@@ -179,5 +179,29 @@ public class StatusScreen {
 	
 	public void setItemAtSetSlot(Item item, Vector2 slot) {
 		itemSlots[(int) slot.X][(int) slot.Y] = item;
+	}
+
+	public boolean isSelecting() {
+		return isSelecting;
+	}
+
+	public void setSelecting(boolean isSelecting) {
+		this.isSelecting = isSelecting;
+	}
+
+	public Vector2 getCurrentSelected() {
+		return currentSelected;
+	}
+
+	public void setCurrentSelected(Vector2 currentSelected) {
+		this.currentSelected = currentSelected;
+	}
+
+	public Item getSelectedItem() {
+		return selectedItem;
+	}
+
+	public void setSelectedItem(Item selectedItem) {
+		this.selectedItem = selectedItem;
 	}
 }

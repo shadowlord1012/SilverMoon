@@ -23,6 +23,9 @@ public class Item {
 	@SerializedName("requirements")
 	private Requirements requirements;
 	
+	@SerializedName("Type")
+	private String type;
+	
 	private transient Image img;
 	
 	public String getName() {return name;}
@@ -30,6 +33,7 @@ public class Item {
 	public StatusEffects getEffects() {return statusEffect;}
 	public Requirements getRequirements() { return requirements;}
 	public Image getImage() {return img;}
+	public String getType() {return type;}
 	
 	public void setName(String value) {name = value;}
 	public void setQuantity(int value) {quantity = value;}
@@ -37,6 +41,7 @@ public class Item {
 	public void setEffects(String name, String target, int amount, long duration) {
 		statusEffect.setEffect(name,target,amount,duration);
 	}
+	public void setType(String value) {type = value;}
 	
 	public Item() {
 	}

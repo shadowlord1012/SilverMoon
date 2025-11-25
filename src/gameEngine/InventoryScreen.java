@@ -33,7 +33,7 @@ public class InventoryScreen extends StatusScreen {
 			}
 		}
 		
-		//If it remains unadded, then add it to an empty slot
+		//If it remains un-added, then add it to an empty slot
 		if(!added) {
 			for(int x = 0; x < super.getMaxSelected().X; x++) {
 				for(int y = 0; y < super.getMaxSelected().Y; y++) {
