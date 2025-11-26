@@ -262,7 +262,6 @@ public class Main extends Application {
 			gameThread = new Thread(mainGameEngine,"GameEngineThread");
 			gameThread.setDaemon(true);
 			gameThread.start();
-			
 		}
 	}
 	@Override

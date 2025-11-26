@@ -1,14 +1,32 @@
 package gameEngine;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Player extends Entity{
+	
+	
+	@SerializedName("Seconds")
+	private byte seconds;
+	
+	@SerializedName("Minutes")
+	private byte minutes;
+	
+	@SerializedName("Hours")
+	private int hours;
 	
 	private transient HeadsUpDisplay hud;
 	
 	public HeadsUpDisplay getHUD() { return hud;}
+	
+	public transient StatusScreenController statusScreenController;
+	
 	public void setHUD(HeadsUpDisplay value) { hud = value;}
+	
+	
 	public Player() {
 		super();
 		this.SetRow(6);
+		statusScreenController = new StatusScreenController(this);
 	}
 	
 	/**
@@ -137,16 +155,78 @@ public class Player extends Entity{
 	@Override
 	public void Update(World w) {
 		
-		movement(w);
-		cameraMovement(w);
-		super.Update(w);
+		//Will only update the player if the status screen is not open
+		if(!statusScreenController.isOpen()) {
+			//Updates the movement of the player
+			movement(w);
+		
+			//updates the camera movement
+			cameraMovement(w);
+			
+			//Updates the player as an entity
+			super.Update(w);
+		}
+		//updates the Status Screen Controller
+		statusScreenController.Update();
+		
+		//Updates the Heads Up Display
 		hud.Update(this);
 	}
 	
 	@Override
 	public void Draw(javafx.scene.canvas.GraphicsContext gc) {
-		
 		super.Draw(gc);
+		
+		//Draws the Status Screen Controller
+		statusScreenController.Draw(gc);
+	}
+
+
+	/**
+	 * @return the seconds
+	 */
+	public byte getSeconds() {
+		return seconds;
+	}
+
+
+	/**
+	 * @param seconds the seconds to set
+	 */
+	public void setSeconds(byte seconds) {
+		this.seconds = seconds;
+	}
+
+
+	/**
+	 * @return the minutes
+	 */
+	public byte getMinutes() {
+		return minutes;
+	}
+
+
+	/**
+	 * @param minutes the minutes to set
+	 */
+	public void setMinutes(byte minutes) {
+		this.minutes = minutes;
+	}
+
+
+	/**
+	 * @return the hours
+	 */
+	public int getHours() {
+		return hours;
+	}
+
+
+	/**
+	 * @param hours the hours to set
+	 */
+	public void setHours(int hours) {
+		this.hours = hours;
 	}
 }
 ;

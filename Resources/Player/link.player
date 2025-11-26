@@ -7,6 +7,7 @@
     "Attack": 5,
     "Defence": 5
   },
+  "Gold": 1325462,
   "Items": {},
   "ElementalAlignment": "none",
   "NumberOfImages": {
@@ -20,5 +21,8 @@
     "width": 40,
     "height": 40
   },
-  "SpriteSheetPath": "C:\\Users\\mikek\\Documents\\SilverMoon\\Resources\\Player\\Link.png"
+  "SpriteSheetPath": "C:\\Users\\mikek\\Documents\\SilverMoon\\Resources\\Player\\Link.png",
+  "Seconds": 0,
+  "Minutes": 0,
+  "Hours": 0
 }

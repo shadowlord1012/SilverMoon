@@ -1,6 +1,7 @@
 package gameEngine;
 
 import javafx.scene.input.KeyCode;
+import javafx.scene.text.Font;
 
 public class Global {
 	public static int SCALE = 3;  // Scale for the graphics rendering
@@ -21,8 +22,13 @@ public class Global {
 	public static KeyCode DEBUG_DOWN = KeyCode.O;
 	public static KeyCode SCREEN_MOVE_LEFT = KeyCode.Q; // Screen move left key
 	public static KeyCode SCREEN_MOVE_RIGHT = KeyCode.E; // Screen move right key
+	public static KeyCode OPEN_STATUS_SCREENS = KeyCode.TAB; // Open Status Screens key
 	public static final DataLoader DATA_LOADER = new DataLoader(); // Global Data Loader
 	public static String CURRENT_LEVEL = "levelOne";
 	public static String TILE_MAP_NAME	 = "Map1";
 	public static boolean TILE_MAP_LOADED = false;
+	public static Font LADY_RADICAL = Font.loadFont("file:Resources/Fonts/LadyRadical.ttf", 14);
+	public static Font ADVENTURE_REQUEST = Font.loadFont("file:Resources/Fonts/AdventureRequest.ttf", 14);
+	public static Font DEFAULT_FONT = Font.getDefault();
+	public static GameTime GAME_TIME;
 }

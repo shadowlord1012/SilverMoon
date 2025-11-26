@@ -8,6 +8,7 @@ public class KeyHandlerController {
 	public static boolean Action = false;
 	public static boolean[] UpDown = {false,false};
 	public static boolean[] ScreenMovement = {false,false}; 
+	public static boolean OpenStatusScreens = false;
 	
 	
 	public void keyPressed(KeyEvent e) {
@@ -25,6 +26,12 @@ public class KeyHandlerController {
 			UpDown[0] = true;
 		if(e.getCode() == Global.DEBUG_DOWN)
 			UpDown[1] = true;
+		if(e.getCode() == Global.OPEN_STATUS_SCREENS)
+			OpenStatusScreens = true;
+		if(e.getCode() == Global.SCREEN_MOVE_LEFT)
+			ScreenMovement[1] = true;
+		if(e.getCode() == Global.SCREEN_MOVE_RIGHT)
+			ScreenMovement[0] = true;
 	}
 	public void keyRealesed(KeyEvent e) {
 		if(e.getCode() == Global.MOVEMENT_UP)
@@ -41,5 +48,11 @@ public class KeyHandlerController {
 			UpDown[0] = false;
 		if(e.getCode() == Global.DEBUG_DOWN)
 			UpDown[1] = false;
+		if(e.getCode() == Global.OPEN_STATUS_SCREENS)
+			OpenStatusScreens = false;
+		if(e.getCode() == Global.SCREEN_MOVE_LEFT)
+			ScreenMovement[1] = false;
+		if(e.getCode() == Global.SCREEN_MOVE_RIGHT)
+			ScreenMovement[0] = false;
 	}
 }

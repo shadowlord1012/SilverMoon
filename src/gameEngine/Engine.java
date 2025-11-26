@@ -45,14 +45,19 @@ public class Engine implements Runnable{
 		//TODO : Add in information from the data loader
 		
 		Future<List<Abilities>> abilitiesListLoading = Global.DATA_LOADER.loadAbilities();
-				
+
+		
+		
 		//Loads in the player data
 		player = Global.DATA_LOADER.LoadPlayerData("Link");
 		player.IsActive = true;
 		player.setHUD(new HeadsUpDisplay(player));
-		player.getStatusMap().put("magiccurrent", 4.0);
+		player.getStatusMap().put("magiccurrent", 10.0);
 		player.getStatusMap().put("healthcurrent",  10.0);
-				
+			
+		//Starts the game timer to keep track of time played
+		Global.GAME_TIME = new gameEngine.GameTime();
+		
 		Future<World> worldLoading = Global.DATA_LOADER.loadingWorld();
 		
 		try {
@@ -137,15 +142,19 @@ public class Engine implements Runnable{
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
-		// TODO Auto-generated method stub
+		
+		//Game Loop
 		while(running) {
-			long now = System.nanoTime();
 			
+			//Calculates delta time
+			long now = System.nanoTime();
 			delta+=(now-lastTime)/nsPerTick;
 			lastTime = now;
+			
+			//Updates the game logic based on delta time
 			while(delta >= 1)
 			{
 				Update();
@@ -154,8 +163,11 @@ public class Engine implements Runnable{
 				
 			}
 			
+			//Draws the game
 			Platform.runLater(this::Draw);
 			
+			
+			//Sleeps the thread to prevent overuse of CPU
 			try {
 				Thread.sleep(1);
 			}catch (InterruptedException e) {

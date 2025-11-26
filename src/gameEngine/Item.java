@@ -10,7 +10,7 @@ import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
 
 public class Item {
-	
+
 	@SerializedName("Name")
 	private String name;  // Name of the item
 	

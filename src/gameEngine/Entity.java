@@ -29,6 +29,9 @@ public class Entity {
 		@SerializedName("Items")
 		private Map<String, Item> items;
 		
+		@SerializedName("Gold")
+		private int gold;  // How much gold the entity has
+		
 		@SerializedName("ElementalAlignment")
 		private String elementalAlignment;
 		
@@ -259,5 +262,17 @@ public class Entity {
 				}
 			}
 		}
+	}
+	/**
+	 * @return the gold
+	 */
+	public int getGold() {
+		return gold;
+	}
+	/**
+	 * @param gold the gold to set
+	 */
+	public void setGold(int gold) {
+		this.gold = gold;
 	}
 }
