@@ -18,14 +18,17 @@ public class EquipmentScreen extends StatusScreen{
 	
 	public EquipmentScreen(Entity entityRef) {
 		super(entityRef);
-		
+
+		//Sets the offsets for the Equipment Screen
+		super.setWidthOffset(0);
+		super.setHeightOffset(40);
 		//Sets the Background Image
 		try {
 			equipmentScreen = ImageIO.read(new File("Resources/Images/UI/EquipmentScreen.png"));
 		}catch(Exception e) {e.printStackTrace();}
 		
 		//sets all the values for the Equipment Screen
-		super.setMaxSelected(new Vector2(1,6));
+		super.setMaxSelected(new Vector2(0,4));
 		super.setBackgroundImage(SwingFXUtils.toFXImage(equipmentScreen, null));
 		super.setItemSlots(new Item[(int)super.getMaxSelected().X][(int)super.getMaxSelected().Y]);
 	}
@@ -53,9 +56,6 @@ public class EquipmentScreen extends StatusScreen{
 				break;
 			case 5:
 				SlotNumber(item, 4);
-				break;
-			case 6: 
-				SlotNumber(item, 5);
 				break;
 			}
 		}
@@ -131,21 +131,21 @@ public class EquipmentScreen extends StatusScreen{
 		
 		//Writes all the information about the entity
 		gc.fillText(String.format("Name: %s", super.getEntity().getName()),
-				super.getBackgroundPosition().X+250, super.getBackgroundPosition().Y+70);
+				super.getBackgroundPosition().X+250, super.getBackgroundPosition().Y+55);
 		gc.fillText(String.format("Level: %d", (int)super.getEntity().getStatusByName("Level")),
-				super.getBackgroundPosition().X+250, super.getBackgroundPosition().Y+95);
+				super.getBackgroundPosition().X+250, super.getBackgroundPosition().Y+80);
 		gc.fillText(String.format("Health: %d / %d", (int)super.getEntity().getStatusByName("healthcurrent"), (int)super.getEntity().getStatusByName("Health")),
-				super.getBackgroundPosition().X+250, super.getBackgroundPosition().Y+120);
+				super.getBackgroundPosition().X+250, super.getBackgroundPosition().Y+105);
 		gc.fillText(String.format("Magic: %d / %d", (int)super.getEntity().getStatusByName("magiccurrent"), (int)super.getEntity().getStatusByName("Magic")),
-				super.getBackgroundPosition().X+250, super.getBackgroundPosition().Y+145);
+				super.getBackgroundPosition().X+250, super.getBackgroundPosition().Y+130);
 		gc.fillText(String.format("Attack: %d", (int)super.getEntity().getStatusByName("Attack")),
-				super.getBackgroundPosition().X+250, super.getBackgroundPosition().Y+170);
+				super.getBackgroundPosition().X+250, super.getBackgroundPosition().Y+155);
 		gc.fillText(String.format("Defence: %d", (int)super.getEntity().getStatusByName("Defence")),
-				super.getBackgroundPosition().X+250, super.getBackgroundPosition().Y+195);
+				super.getBackgroundPosition().X+250, super.getBackgroundPosition().Y+180);
 		gc.fillText(String.format("Elemental: \n %s", super.getEntity().getAlignment()),
-				super.getBackgroundPosition().X+250, super.getBackgroundPosition().Y+220);
+				super.getBackgroundPosition().X+250, super.getBackgroundPosition().Y+205);
 		gc.fillText(String.format("Gold: \n %d", super.getEntity().getGold()),
-				super.getBackgroundPosition().X+250, super.getBackgroundPosition().Y+260);
+				super.getBackgroundPosition().X+250, super.getBackgroundPosition().Y+250);
 		
 		//Turns the font back to black
 		gc.setFill(Color.BLACK);

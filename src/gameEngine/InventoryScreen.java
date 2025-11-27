@@ -16,6 +16,9 @@ public class InventoryScreen extends StatusScreen {
 	public InventoryScreen(Entity entityRef) {
 		super(entityRef);
 		
+		//Sets the offsets for the Equipment Screen
+		super.setWidthOffset(40);
+		super.setHeightOffset(40);
 		//Sets the Background Image
 		try {
 			inventoryBackground = ImageIO.read(new File("Resources/Images/UI/InventoryScreen.png"));
@@ -23,7 +26,7 @@ public class InventoryScreen extends StatusScreen {
 		
 		//Sets all the values for the Inventory Screen
 		super.setBackgroundImage(SwingFXUtils.toFXImage(inventoryBackground,null));
-		super.setMaxSelected(new Vector2(6,6));
+		super.setMaxSelected(new Vector2(9,4));
 		super.setItemSlots(new Item[(int) super.getMaxSelected().X][(int) super.getMaxSelected().Y]);
 	}
 	
@@ -60,6 +63,7 @@ public class InventoryScreen extends StatusScreen {
 					if(super.getItemSlots()[x][y] == null) {
 						super.setItemAtSetSlot(item, new Vector2(x,y));
 						added = true;
+						System.out.println(String.format("Item: %s added to Inventory at: %d , %d", item.getName(),x,y));
 						return;
 					}
 				}
@@ -77,5 +81,15 @@ public class InventoryScreen extends StatusScreen {
 	@Override
 	public void Draw(GraphicsContext gc) {
 		super.Draw(gc);
+		for(int x = 0; x < super.getMaxSelected().X; x++) {
+			for(int y = 0; y < super.getMaxSelected().Y; y++) {
+				//If there is an item in the slot, draw it
+				if(super.getItemSlots()[x][y] != null) {
+					gc.drawImage(super.getItemSlots()[x][y].getImage(),super.getBackgroundPosition().X+30+(x*40),
+							super.getBackgroundPosition().Y+60+(y*40),30,30);
+				}
+			}
+		}
+		
 	}
 }

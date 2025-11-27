@@ -231,9 +231,7 @@ public class Main extends Application {
 		{
 			engineLoaded=true;
 			System.out.println("Engine Loaded");
-		}
-		
-		
+		}		
 		if(gameEngineLoading.isDone() && KeyHandlerController.Action && runGame)
 		{
 			

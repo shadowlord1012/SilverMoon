@@ -1,0 +1,19 @@
+{
+  "Name": "MagicPotionOne",
+  "Type": "Item",
+  "Quantity": 1,
+  "Effects" : {
+      "Name": "Health Boost",
+      "Duration": 30,
+      "amount": 1,
+      "Target": "Self"
+    },
+  "Requirements": {
+      "Level": 1,
+      "magicPower": 0,
+      "Strength": 0,
+      "physicalDefence": 0,
+      "magicalDefence": 0,
+      "elementalAlignment": "None"
+    }
+}

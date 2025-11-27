@@ -20,6 +20,7 @@ public class QuestScreen extends StatusScreen {
 		super(playerRef);
 		this.playRef = playerRef;
 		
+		
 		//Sets the Background Image
 		try {
 			backgroundImage = ImageIO.read(new File("Resources/Images/UI/QuestScreen.png"));
@@ -42,7 +43,7 @@ public class QuestScreen extends StatusScreen {
 		
 		//Draws the Game Time played
 		gc.fillText(String.format("Game Time: %s", Global.GAME_TIME.TackTime(playRef)), 
-				super.getBackgroundPosition().X+25, super.getBackgroundPosition().Y+250);
+				super.getBackgroundPosition().X+25, super.getBackgroundPosition().Y+270);
 		
 		//Resets the font and color
 		gc.setFont(defaultFont);

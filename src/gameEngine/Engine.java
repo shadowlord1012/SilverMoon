@@ -16,6 +16,7 @@ public class Engine implements Runnable{
 	private GraphicsContext gc;
 	private Map<String,World> gameWorldDirectory = new HashMap<>();
 	private List<Abilities> abilityDirectory = new ArrayList<Abilities>();
+	private List<Item> itemDirectory = new ArrayList<Item>();
 	private String worldName = "Map1";
 	private Player player;
 	private GraphicsController graphics;
@@ -45,7 +46,7 @@ public class Engine implements Runnable{
 		//TODO : Add in information from the data loader
 		
 		Future<List<Abilities>> abilitiesListLoading = Global.DATA_LOADER.loadAbilities();
-
+		Future<List<Item>> itemListLoading = Global.DATA_LOADER.loadItems();
 		
 		
 		//Loads in the player data
@@ -63,6 +64,15 @@ public class Engine implements Runnable{
 		try {
 			abilityDirectory = abilitiesListLoading.get();
 			System.out.println("Abilities Loaded: " + abilityDirectory.size());
+		}catch(Exception e) {e.printStackTrace();}
+		
+		try {
+			itemDirectory = itemListLoading.get();
+			System.out.println("Items Loaded: " + itemDirectory.size());
+			itemDirectory.forEach(item -> item.LoadImage());
+			player.statusScreenController.getInventoryScreen().AddItemToInventory(itemDirectory.get(0));
+			player.statusScreenController.getInventoryScreen().AddItemToInventory(itemDirectory.get(1));
+			
 		}catch(Exception e) {e.printStackTrace();}
 		
 		try {

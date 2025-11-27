@@ -19,19 +19,28 @@ public class StatusScreen {
 	private boolean isSelectingAllowed = true;
 	private Item selectedItem;
 	private Item[][] itemSlots;
-	private Vector2 currentSelected;
-	private Vector2 delayCounter= new Vector2(0,50);
+	private Vector2 currentSelected = new Vector2(0,0);
+	private Vector2 delayCounter= new Vector2(0, 40);;
 	private Vector2 maxSelected;
 	private int widthOffset;
 	private int heightOffset;
 	
 	public StatusScreen(Entity entityRef) {
 		setEntity(entityRef);
-		position = new Vector2[3];
-		position[0] = new Vector2(Global.RENDER_X/2-200,Global.RENDER_Y/2-150); //Background Position
-		position[1] = new Vector2(position[0].X+20,position[0].Y+35); //Cursor Position
+		
+		
+		
+		//Sets the position array
+		position = new Vector2[3]; //0 = Background, 1 = Cursor, 2 = Selected Item
+		position[0] = new Vector2(Global.RENDER_X/2-200,Global.RENDER_Y/2-150); 
+		position[1] = new Vector2(position[0].X+20,position[0].Y+50); 
 		position[2] = new Vector2(0,0); //Selected Item Position
+		
+		//Sets the starting position of the cursor
+		startingPosition = new Vector2(position[0].X+20,position[0].Y+50);
+		
 		try {
+			//Sets the cursor image
 			cursorImage = SwingFXUtils.toFXImage(
 				ImageIO.read(new File("Resources/Images/UI/cursor.png")), null);
 		}catch(Exception e) {
@@ -40,13 +49,14 @@ public class StatusScreen {
 	}
 	
 	public void OnChange(StatusScreen current, StatusScreen target) {
-		target.setOpen(true);
-		current.setOpen(false);
-		if(current.isSelecting()) {
-			target.setSelectedItem(current.getSelectedItem());
-			current.setSelectedItem(null);
-			target.setSelecting(true);
-		}
+		if(!current.isSelecting() )
+			return;
+		
+		Item item = current.getSelectedItem();
+		current.setSelectedItem(null);
+		target.setSelectedItem(item);
+		target.setSelecting(true);
+		
 	}
 	
 	public void Update() {		
@@ -56,7 +66,7 @@ public class StatusScreen {
 			if(delayCounter.X >= delayCounter.Y)
 				delayCounter.X = delayCounter.Y;
 			
-			/*
+			
 			//Moves the cursor UP, LEFT, DOWN, RIGHT
 			if(KeyHandlerController.Movement[0] && delayCounter.X == delayCounter.Y)
 			{
@@ -86,19 +96,21 @@ public class StatusScreen {
 				if(getCurrentSelected().X > getMaxSelected().X)
 					getCurrentSelected().X = 0;
 			}
-			if(KeyHandlerController.Action && delayCounter.X == delayCounter.Y && isSelectingAllowed) {
-				if(!isSelecting()) {
+			if(KeyHandlerController.Action && delayCounter.X == delayCounter.Y && isSelectingAllowed && delayCounter.X == delayCounter.Y) {
+				if(getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y] != null && !isSelecting()) {
+					
 					//Picks up the item from the slot that its currently on.
 					setSelectedItem(getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y]);
-					
+						
 					//Empty the slot that the item was in
 					getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y] = null;
-					
+						
 					//Sets the selecting boolean to true
 					setSelecting(true);
+
 				}
-				else {
-					
+				else if(getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y] == null && isSelecting()) {
+
 					//Places the selected item into the current slot selected.
 					getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y] = getSelectedItem();
 					
@@ -108,18 +120,33 @@ public class StatusScreen {
 					//Sets the selecting boolean to false
 					setSelecting(false);
 				}
+				else if (getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y] != null && isSelecting()) {
+					
+					//Swaps the items
+					Item temp = getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y];
+					
+					//Places the selected item into the current slot selected.
+					getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y] = getSelectedItem();
+					
+					//Sets the selected item to the temp item
+					setSelectedItem(temp);
+					
+					setSelecting(true);
+				}
+				else {
+					
+				}
 				delayCounter.X = 0;
 			}
-			*/
+			
 			//Updates the position of the cursor on the screen
 			if(currentSelected != null)
-				position[1] = new Vector2(getCurrentSelected().X*widthOffset+startingPosition.X,
-					getCurrentSelected().Y*heightOffset+startingPosition.Y);
+				position[1] = new Vector2(getCurrentSelected().X*getWidthOffset()+startingPosition.X,
+					getCurrentSelected().Y*getHeightOffset()+startingPosition.Y);
 			
 			//Updates the position of the selected item if there is one
 			if(isSelecting())
-				position[2] = new Vector2(position[1].X+getCursorImage().getWidth()+5,
-					position[1].Y+getCursorImage().getHeight()+5);
+				position[2] = new Vector2(position[1].X+30,	position[1].Y+30);
 		}
 	}
 	
@@ -271,5 +298,33 @@ public class StatusScreen {
 	
 	public Vector2 getBackgroundPosition() {
 		return position[0];
+	}
+
+	/**
+	 * @return the widthOffset
+	 */
+	public int getWidthOffset() {
+		return widthOffset;
+	}
+
+	/**
+	 * @param widthOffset the widthOffset to set
+	 */
+	public void setWidthOffset(int widthOffset) {
+		this.widthOffset = widthOffset;
+	}
+
+	/**
+	 * @return the heightOffset
+	 */
+	public int getHeightOffset() {
+		return heightOffset;
+	}
+
+	/**
+	 * @param heightOffset the heightOffset to set
+	 */
+	public void setHeightOffset(int heightOffset) {
+		this.heightOffset = heightOffset;
 	}
 }

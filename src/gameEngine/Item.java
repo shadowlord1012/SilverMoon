@@ -1,5 +1,6 @@
 package gameEngine;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
 
 import javax.imageio.ImageIO;
@@ -46,19 +47,18 @@ public class Item {
 	public Item() {
 	}
 	
-	public void Initialize(String name, int quantity, StatusEffects targetEffect) {
+	public void Initialize(String name, int quantity, StatusEffects targetEffect, String type, Requirements reqs) {
 		this.name = name;
 		this.quantity = quantity;
 		this.statusEffect = targetEffect;
+		this.type = type;
+		this.requirements = reqs;
 	}
 
 	public void LoadImage() {
-
-		File file = new File("Resources/Images/Items/"+name+".png");
 		
 		try {
-			img = SwingFXUtils.toFXImage(ImageIO.read(file),null);
-			
+			img = SwingFXUtils.toFXImage((BufferedImage)ImageIO.read(new File("Resources/Images/Items/"+name+".png")),null);
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
