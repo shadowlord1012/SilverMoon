@@ -77,6 +77,8 @@ public class GraphicsController {
 							}
 						}
 					}
+					
+					
 					//Draw the player on the screen
 					player.Draw(gc);
 					
@@ -111,6 +113,7 @@ public class GraphicsController {
 						}
 					}
 				});
+			level.currentLevel(Global.CURRENT_LEVEL).DrawItems(gc);
 		});
 		
 		hud.Draw(gc);

@@ -1,6 +1,7 @@
 package gameEngine;
 
 import java.awt.Rectangle;
+import java.util.List;
 
 public class Collision {
 	
@@ -83,5 +84,35 @@ public class Collision {
 					}
 			}
 		});
+	}
+	
+	public static void ItemCollision(Player player, Item item)
+	{
+		//creates the entities
+		Rectangle entityRec = new Rectangle(
+				(int)player.getPosition().X,
+				(int)player.getPosition().Y,
+				(int)player.getWidth()-5,
+				(int)player.getHeight()-5);
+		
+		Rectangle itemRec = new Rectangle(
+				(int)item.getPosition().X,
+				(int)item.getPosition().Y,
+				(int)item.getImage().getWidth(),
+				(int)item.getImage().getHeight());
+		
+		for(int x = 0; x <= player.statusScreenController.getInventoryScreen().getMaxSelected().X; x++)
+		{
+			for(int y = 0; y <= player.statusScreenController.getInventoryScreen().getMaxSelected().Y; y++)
+			{
+				if(entityRec.intersects(itemRec))
+				{
+					player.statusScreenController.getInventoryScreen().AddItemToInventory(item);
+					item.setPosition(new Vector2(-500, -500)); //move the item off screen
+					return;
+				}
+			}
+		}
+				
 	}
 }

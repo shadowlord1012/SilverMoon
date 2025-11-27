@@ -3,6 +3,8 @@ package gameEngine;
 import java.util.ArrayList;
 import java.util.List;
 
+import javafx.scene.canvas.GraphicsContext;
+
 public class World {
 	
 	private List<Level> levelList;
@@ -19,6 +21,7 @@ public class World {
 	 */
 	public World() {
 		levelList = new ArrayList<Level>();
+		
 		Initialize();
 	}
 	

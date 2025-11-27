@@ -20,7 +20,7 @@ public class StatusScreen {
 	private Item selectedItem;
 	private Item[][] itemSlots;
 	private Vector2 currentSelected = new Vector2(0,0);
-	private Vector2 delayCounter= new Vector2(0, 40);;
+	private Vector2 delayCounter= new Vector2(0, 20);;
 	private Vector2 maxSelected;
 	private int widthOffset;
 	private int heightOffset;
@@ -73,27 +73,27 @@ public class StatusScreen {
 				delayCounter.X = 0;
 				getCurrentSelected().Y--;
 				if(getCurrentSelected().Y < 0)
-					getCurrentSelected().Y = getMaxSelected().Y;
+					getCurrentSelected().Y = getMaxSelected().Y-1;
 			}
 			if(KeyHandlerController.Movement[1] && delayCounter.X == delayCounter.Y)
 			{
 				delayCounter.X = 0;
 				getCurrentSelected().X--;
 				if(getCurrentSelected().X < 0)
-					getCurrentSelected().X = getMaxSelected().X;
+					getCurrentSelected().X = getMaxSelected().X-1;
 			}
 			if(KeyHandlerController.Movement[2] && delayCounter.X == delayCounter.Y)
 			{
 				delayCounter.X = 0;
 				getCurrentSelected().Y++;
-				if(getCurrentSelected().Y > getMaxSelected().Y)
+				if(getCurrentSelected().Y > getMaxSelected().Y-1)
 					getCurrentSelected().Y = 0;
 			}
 			if(KeyHandlerController.Movement[3] && delayCounter.X == delayCounter.Y)
 			{
 				delayCounter.X = 0;
 				getCurrentSelected().X++;
-				if(getCurrentSelected().X > getMaxSelected().X)
+				if(getCurrentSelected().X > getMaxSelected().X-1)
 					getCurrentSelected().X = 0;
 			}
 			if(KeyHandlerController.Action && delayCounter.X == delayCounter.Y && isSelectingAllowed && delayCounter.X == delayCounter.Y) {

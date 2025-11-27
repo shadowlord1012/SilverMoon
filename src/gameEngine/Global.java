@@ -1,5 +1,8 @@
 package gameEngine;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javafx.scene.input.KeyCode;
 import javafx.scene.text.Font;
 
@@ -31,4 +34,5 @@ public class Global {
 	public static Font ADVENTURE_REQUEST = Font.loadFont("file:Resources/Fonts/AdventureRequest.ttf", 14);
 	public static Font DEFAULT_FONT = Font.getDefault();
 	public static GameTime GAME_TIME;
+	public static List<Item> ITEM_DIRECTORY = new ArrayList<Item>();
 }

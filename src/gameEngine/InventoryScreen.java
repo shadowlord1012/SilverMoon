@@ -7,6 +7,8 @@ import javax.imageio.ImageIO;
 
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 
 public class InventoryScreen extends StatusScreen {
 
@@ -26,7 +28,7 @@ public class InventoryScreen extends StatusScreen {
 		
 		//Sets all the values for the Inventory Screen
 		super.setBackgroundImage(SwingFXUtils.toFXImage(inventoryBackground,null));
-		super.setMaxSelected(new Vector2(9,4));
+		super.setMaxSelected(new Vector2(10,5));
 		super.setItemSlots(new Item[(int) super.getMaxSelected().X][(int) super.getMaxSelected().Y]);
 	}
 	
@@ -35,23 +37,27 @@ public class InventoryScreen extends StatusScreen {
 		
 		//Go though the whole inventory and make sure there is not an item already there
 		for(int x = 0; x < super.getMaxSelected().X; x++) {
-			for(int y = 0; y < super.getMaxSelected().Y; y++) {
-				
-				//If there is an item in the slot
-				if(super.getItemSlots()[x][y] != null && !added) {
+				for(int y = 0; y < super.getMaxSelected().Y; y++) {
 					
-					//Check if the item names match
-					if(super.getItemSlots()[x][y].getName().toLowerCase().equals(item.getName().toLowerCase())) {
+					//If there is an item in the slot
+					if(super.getItemSlots()[x][y] != null && !added) {
 						
-						//If they do, add the quantity to the existing item
-						super.getItemSlots()[x][y].addQuantity(item.getQuantity());
-						
-						//Makes sure not to add it again in a different Slot
-						added = true;
-						return;
+						//Check if the item names match
+						if(super.getItemSlots()[x][y].getName().toLowerCase().equals(item.getName().toLowerCase())) {
+							
+							//If they do, add the quantity to the existing item
+							super.getItemSlots()[x][y].addQuantity(item.getQuantity());
+							
+							System.out.println(String.format("Item: %s quantity increased by: %d. New Quantity: %d", 
+									item.getName(), item.getQuantity(), super.getItemSlots()[x][y].getQuantity()));
+							//Makes sure not to add it again in a different Slot
+							added = true;
+							x= (int) super.getMaxSelected().X; //Breaks the outer loop
+							y= (int) super.getMaxSelected().Y; //Breaks the inner loop
+							return;
+						}
 					}
 				}
-			}
 		}
 		
 		//If it remains un-added, then add it to an empty slot
@@ -59,11 +65,13 @@ public class InventoryScreen extends StatusScreen {
 			for(int x = 0; x < super.getMaxSelected().X; x++) {
 				for(int y = 0; y < super.getMaxSelected().Y; y++) {
 					
-					//Finds the first emtpy slot and adds the item there
+					//Finds the first empty slot and adds the item there
 					if(super.getItemSlots()[x][y] == null) {
 						super.setItemAtSetSlot(item, new Vector2(x,y));
 						added = true;
 						System.out.println(String.format("Item: %s added to Inventory at: %d , %d", item.getName(),x,y));
+						x= (int) super.getMaxSelected().X; //Breaks the outer loop
+						y= (int) super.getMaxSelected().Y; //Breaks the inner loop
 						return;
 					}
 				}
@@ -85,8 +93,28 @@ public class InventoryScreen extends StatusScreen {
 			for(int y = 0; y < super.getMaxSelected().Y; y++) {
 				//If there is an item in the slot, draw it
 				if(super.getItemSlots()[x][y] != null) {
+					
+					//draw the item image
 					gc.drawImage(super.getItemSlots()[x][y].getImage(),super.getBackgroundPosition().X+30+(x*40),
 							super.getBackgroundPosition().Y+60+(y*40),30,30);
+					
+					//gets the default font
+					Font defaultFont = Font.getDefault();
+					
+					//sets the font to Adventure Request
+					gc.setFont(Global.ADVENTURE_REQUEST);
+					
+					//set item name on screen
+					gc.setFill(Color.WHITE);
+					
+					
+					//draw the quantity
+					gc.fillText(String.valueOf(super.getItemSlots()[x][y].getQuantity()),
+							super.getBackgroundPosition().X+60+(x*40),
+							super.getBackgroundPosition().Y+100+(y*40));
+					
+					gc.setFill(Color.BLACK);
+					gc.setFont(defaultFont);
 				}
 			}
 		}

@@ -4,10 +4,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Future;
 
+import javafx.scene.canvas.GraphicsContext;
+
 public class Level {
 
 	private String name;
 	private Map<String,TileMap> tileMaps;
+	private List<Item> itemList;
 	
 	public String getLevelName() {return name;}
 	public TileMap getTileMap(String value) {return tileMaps.get(value);}
@@ -19,6 +22,13 @@ public class Level {
 	public Level(String name) {
 		this.name = name;
 		tileMaps = new java.util.HashMap<>();
+
+		setItemList(Global.ITEM_DIRECTORY);
+		
+		getItemList().forEach(e -> {
+			e.setPosition(new Vector2((Math.random()*100)+50, (Math.random()*100)+50));
+			e.LoadImage();
+		});
 	}
 
 	
@@ -57,6 +67,23 @@ public class Level {
 	 */
 	public void Update(String currentMap) {
 		this.tileMaps.get(currentMap).Update();
+	}
+	
+	public void DrawItems(GraphicsContext gc) {
+		getItemList().forEach(e -> {
+			if(e.getImage() != null)
+				gc.drawImage(e.getImage(), 
+					e.getPosition().X + Global.CAMERA.Position.X, 
+					e.getPosition().Y + Global.CAMERA.Position.Y,
+					e.getImage().getWidth()*Global.SCALE,
+					e.getImage().getHeight()*Global.SCALE);
+		});
+	}
+	public List<Item> getItemList() {
+		return itemList;
+	}
+	public void setItemList(List<Item> itemList) {
+		this.itemList = itemList;
 	}
 	
 }

@@ -9,7 +9,7 @@ public class StatusScreenController {
 	private QuestScreen questScreen;
 	private int currentScreen = 0; // 0 = Inventory, 1 = Equipment, 2 = Quest
 	private int lastKnownScreen = 0;
-	private int counter = 0;
+	private int[] counter = {0,20};
 	private boolean open = false;
 	
 	public StatusScreenController(Player entity) {
@@ -50,7 +50,7 @@ public class StatusScreenController {
 	}
 	
 	//TODO: Item is not carrying over correctly when switching screens
-	//Need to fix that
+	//Need to fix that Item will vanish on change.
 	private void changeWithItemScreen() {
 		switch(currentScreen) {
 		case 0:
@@ -86,14 +86,14 @@ public class StatusScreenController {
 	public void Update() {
 		
 		//Simple counter to add delay to screen switching
-		counter++;
-		if(counter >=50)
-			counter = 50;
+		counter[0]++;
+		if(counter[0] >=counter[1])
+			counter[0] = counter[1];
 
 		if(getInventoryScreen().isOpen() || equipmentScreen.isOpen() || questScreen.isOpen()) {
 			
 			lastKnownScreen = currentScreen;
-			if(KeyHandlerController.ScreenMovement[0] && counter == 50) {
+			if(KeyHandlerController.ScreenMovement[0] && counter[0] == counter[1]) {
 				//Moves to the previous screen
 				currentScreen--;
 				
@@ -102,14 +102,14 @@ public class StatusScreenController {
 					currentScreen = 2;
 				
 				//resets the counter
-				counter = 0;
+				counter[0] = 0;
 				
 				//Changes the screen
 				changeScreen();
 				changeWithItemScreen();
 			}
 			
-			if(KeyHandlerController.ScreenMovement[1] && counter == 50) {
+			if(KeyHandlerController.ScreenMovement[1] && counter[0] == counter[1]) {
 				//Moves to the next screen
 				currentScreen++;
 				
@@ -118,7 +118,7 @@ public class StatusScreenController {
 					currentScreen = 0;
 				
 				//resets the counter
-				counter = 0;
+				counter[0] = 0;
 				
 				//Changes the screen
 				changeScreen();
@@ -127,22 +127,22 @@ public class StatusScreenController {
 		}
 		
 		
-		if(KeyHandlerController.OpenStatusScreens && counter == 50 && isOpen())
+		if(KeyHandlerController.OpenStatusScreens && counter[0] == counter[1] && isOpen())
 		{
 			//Closes all screens
 			getInventoryScreen().setOpen(false);
 			equipmentScreen.setOpen(false);
 			questScreen.setOpen(false);
 			setOpen(false);
-			counter = 0;
+			counter[0] = 0;
 		} 
-		else if(KeyHandlerController.OpenStatusScreens && counter == 50 && !isOpen()) {
+		else if(KeyHandlerController.OpenStatusScreens && counter[0] == counter[1] && !isOpen()) {
 			
 			//Opens the last known screen
 			changeScreen();
 			
 			//Resets the counter
-			counter = 0;
+			counter[0] = 0;
 			
 			//Sets open to true
 			setOpen(true);

@@ -8,6 +8,7 @@ import javax.imageio.ImageIO;
 import com.google.gson.annotations.SerializedName;
 
 import javafx.embed.swing.SwingFXUtils;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 
 public class Item {
@@ -28,6 +29,7 @@ public class Item {
 	private String type;
 	
 	private transient Image img;
+	private transient Vector2 position;
 	
 	public String getName() {return name;}
 	public int getQuantity() {return quantity;}
@@ -62,5 +64,15 @@ public class Item {
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
+	}
+	public Vector2 getPosition() {
+		return position;
+	}
+	public void setPosition(Vector2 position) {
+		this.position = position;
+	}
+	
+	public void DrawItem(GraphicsContext gc) {
+		gc.drawImage(img, position.X, position.Y);
 	}
 }

@@ -16,7 +16,6 @@ public class Engine implements Runnable{
 	private GraphicsContext gc;
 	private Map<String,World> gameWorldDirectory = new HashMap<>();
 	private List<Abilities> abilityDirectory = new ArrayList<Abilities>();
-	private List<Item> itemDirectory = new ArrayList<Item>();
 	private String worldName = "Map1";
 	private Player player;
 	private GraphicsController graphics;
@@ -67,11 +66,10 @@ public class Engine implements Runnable{
 		}catch(Exception e) {e.printStackTrace();}
 		
 		try {
-			itemDirectory = itemListLoading.get();
-			System.out.println("Items Loaded: " + itemDirectory.size());
-			itemDirectory.forEach(item -> item.LoadImage());
-			player.statusScreenController.getInventoryScreen().AddItemToInventory(itemDirectory.get(0));
-			player.statusScreenController.getInventoryScreen().AddItemToInventory(itemDirectory.get(1));
+			Global.ITEM_DIRECTORY = itemListLoading.get();
+			System.out.println("Items Loaded: " + Global.ITEM_DIRECTORY.size());
+			Global.ITEM_DIRECTORY.forEach(item -> item.LoadImage());
+			player.statusScreenController.getInventoryScreen().AddItemToInventory(Global.ITEM_DIRECTORY.get(0));
 			
 		}catch(Exception e) {e.printStackTrace();}
 		
@@ -115,6 +113,9 @@ public class Engine implements Runnable{
 		//updates the collision in relevance to the player
 		Collision.tileCollision(gameWorldDirectory.get(worldName).currentLevel(Global.CURRENT_LEVEL).getTileMap(Global.TILE_MAP_NAME), player);
 		Collision.teleportLocationCollision(gameWorldDirectory.get(worldName).currentLevel(Global.CURRENT_LEVEL).getTileMap(Global.TILE_MAP_NAME), player);
+		gameWorldDirectory.get(worldName).currentLevel(Global.CURRENT_LEVEL).getItemList().forEach(item -> {
+			Collision.ItemCollision(player, item);
+		});
 		
 		counter++;
 		if(counter >= 50)
