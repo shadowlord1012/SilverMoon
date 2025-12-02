@@ -1,12 +1,12 @@
 {
-  "Name": "HealthPotionOne",
-  "Type": "Consumable",
+  "Name": "BasicTunic",
+  "Type": "Chest",
   "Quantity": 1,
   "Effects" : {
-      "Name": "Health Boost",
-      "Duration": 1,
-      "amount": 2,
-      "Target": "Health"
+      "Name": "Defence Boost",
+      "Duration": 0,
+      "amount": 3,
+      "Target": "Defence"
     },
   "Requirements": {
       "Level": 1,

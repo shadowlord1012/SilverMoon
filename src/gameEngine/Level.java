@@ -27,7 +27,6 @@ public class Level {
 		
 		getItemList().forEach(e -> {
 			e.setPosition(new Vector2((Math.random()*100)+50, (Math.random()*100)+50));
-			e.LoadImage();
 		});
 	}
 
@@ -84,6 +83,7 @@ public class Level {
 	}
 	public void setItemList(List<Item> itemList) {
 		this.itemList = itemList;
+		
 	}
 	
 }

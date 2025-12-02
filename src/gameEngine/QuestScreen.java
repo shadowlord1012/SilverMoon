@@ -28,6 +28,10 @@ public class QuestScreen extends StatusScreen {
 		
 		//Sets all the values for the Quest Screen
 		super.setBackgroundImage(SwingFXUtils.toFXImage(backgroundImage, null));
+		
+		//TODO: Adjust max selected based on design only temp so no error out of bounds if moved
+		super.setMaxSelected(new Vector2(10,5));
+		super.setItemSlots(new Item[(int) super.getMaxSelected().X][(int) super.getMaxSelected().Y]);
 	}
 
 	private void DrawTime(GraphicsContext gc) {

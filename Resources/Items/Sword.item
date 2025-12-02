@@ -1,12 +1,12 @@
 {
-  "Name": "HealthPotionOne",
-  "Type": "Consumable",
+  "Name": "Sword",
+  "Type": "RightHand",
   "Quantity": 1,
   "Effects" : {
-      "Name": "Health Boost",
-      "Duration": 1,
-      "amount": 2,
-      "Target": "Health"
+      "Name": "Attack Boost",
+      "Duration": 0,
+      "amount": 5,
+      "Target": "Attack"
     },
   "Requirements": {
       "Level": 1,

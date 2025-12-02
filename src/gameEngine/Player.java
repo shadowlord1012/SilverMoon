@@ -54,6 +54,8 @@ public class Player extends Entity{
 				
 				//Sets the row in which the Image is located on the sprite sheet
 				this.SetRow(4);
+				
+				setLastKnownDirection(1);
 			}
 			
 			/*
@@ -69,6 +71,7 @@ public class Player extends Entity{
 
 				//Sets the row in which the Image is located on the sprite sheet
 				this.SetRow(7);
+				setLastKnownDirection(4);
 			}
 			/*
 			 * When the character is moving to the down on the screen
@@ -85,6 +88,7 @@ public class Player extends Entity{
 
 				//Sets the row in which the Image is located on the sprite sheet
 				this.SetRow(6);
+				setLastKnownDirection(3);
 			}
 			/*
 			 * WHen the character is moving right on the screen
@@ -101,6 +105,7 @@ public class Player extends Entity{
 
 				//Sets the row in which the Image is located on the sprite sheet
 				this.SetRow(5);
+				setLastKnownDirection(2);
 			}
 			else {
 			}
@@ -152,6 +157,12 @@ public class Player extends Entity{
 		}
 	}
 	
+	private void useAbility(World w) {
+		if(KeyHandlerController.UseAbility && !this.getUsableAbilities()[0].IsOnCoolDown()) {
+			System.out.println("Using Ability");
+		}
+	}
+	
 	@Override
 	public void Update(World w) {
 		
@@ -168,6 +179,9 @@ public class Player extends Entity{
 		}
 		//updates the Status Screen Controller
 		statusScreenController.Update();
+		
+		//Uses an ability if the key is pressed
+		useAbility(w);
 		
 		//Updates the Heads Up Display
 		hud.Update(this);

@@ -57,6 +57,9 @@ public class DataLoader {
 					}
 				}
 			
+			//loads all images for each ability
+			abilityList.forEach(ability -> ability.LoadImage());
+			
 			//returns the ability list
 			return abilityList;
 		};
@@ -98,6 +101,8 @@ public class DataLoader {
 						e.printStackTrace();
 					}
 				}
+			
+			itemList.forEach(item -> item.LoadImage());
 			
 			//returns the item list
 			return itemList;

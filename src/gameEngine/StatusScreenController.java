@@ -23,63 +23,54 @@ public class StatusScreenController {
 		case 0:
 			//Opens the inventory Screen
 			getInventoryScreen().setOpen(true);
-			
+			getInventoryScreen().setScreenName("Inventory");
 			//makes sure the other screens are closed
 			equipmentScreen.setOpen(false);
 			questScreen.setOpen(false);
+			
+		    if(lastKnownScreen == 1) {
+		    	//Transfers selected item from equipment to inventory
+		    	getInventoryScreen().OnChange(equipmentScreen, getInventoryScreen());
+		    } else if(lastKnownScreen == 2) {
+		    	//Transfers selected item from quest to inventory
+		    	getInventoryScreen().OnChange(questScreen, getInventoryScreen());
+		    }
+			
 			break;
 		case 1:			
 			//opens the equipment screen
 			equipmentScreen.setOpen(true);
-			
+			equipmentScreen.setScreenName("Equipment");
 			//makes sure the other screens are closed
 			getInventoryScreen().setOpen(false);
 			questScreen.setOpen(false);
+			
+			if(lastKnownScreen == 0) {
+		    	//Transfers selected item from inventory to equipment
+		    	equipmentScreen.OnChange(getInventoryScreen(), equipmentScreen);
+		    } else if(lastKnownScreen == 2) {
+		    	//Transfers selected item from quest to equipment
+		    	equipmentScreen.OnChange(questScreen, equipmentScreen);
+		    }
 			break;
 		case 2:
 			//opens the quest screen
 			questScreen.setOpen(true);
-			
+			questScreen.setScreenName("Quest");
 			//makes sure the other screens are closed
 			getInventoryScreen().setOpen(false);
 			equipmentScreen.setOpen(false);
+			
+			if(lastKnownScreen == 0) {
+		    	//Transfers selected item from inventory to quest
+		    	questScreen.OnChange(getInventoryScreen(), questScreen);
+		    } else if(lastKnownScreen == 1) {
+		    	//Transfers selected item from equipment to quest
+		    	questScreen.OnChange(equipmentScreen, questScreen);
+		    }
 			break;
 		default:
 			break;
-		}
-	}
-	
-	//TODO: Item is not carrying over correctly when switching screens
-	//Need to fix that Item will vanish on change.
-	private void changeWithItemScreen() {
-		switch(currentScreen) {
-		case 0:
-			switch(lastKnownScreen) {
-			case 1:
-				equipmentScreen.OnChange(inventoryScreen, equipmentScreen);
-				break;
-			case 2:
-				questScreen.OnChange(inventoryScreen, questScreen);
-				break;
-			}
-		case 1:
-			switch(lastKnownScreen) {
-			case 0:
-				inventoryScreen.OnChange(equipmentScreen, inventoryScreen);
-				break;
-			case 2:
-				questScreen.OnChange(equipmentScreen, questScreen);
-				break;
-			}
-		case 2:
-			switch(lastKnownScreen) {
-			case 0:
-				inventoryScreen.OnChange(questScreen, inventoryScreen);
-				break;
-			case 1:
-				equipmentScreen.OnChange(questScreen, equipmentScreen);
-				break;
-			}
 		}
 	}
 	
@@ -106,7 +97,6 @@ public class StatusScreenController {
 				
 				//Changes the screen
 				changeScreen();
-				changeWithItemScreen();
 			}
 			
 			if(KeyHandlerController.ScreenMovement[1] && counter[0] == counter[1]) {
@@ -122,7 +112,6 @@ public class StatusScreenController {
 				
 				//Changes the screen
 				changeScreen();
-				changeWithItemScreen();
 			}
 		}
 		

@@ -1,0 +1,28 @@
+{
+  "name": "FireballL1",
+  "type": "castable",
+  "element": "fire",
+  "duration": 100,
+  "cooldown": 200,
+  "magicCost": 3,
+  "damage": 7,
+  "numberOfImages": {
+      "X": 5,
+      "Y": 1
+    },
+  "ImageRect": {
+    "x": 0,
+    "y": 0,
+    "width": 32,
+    "height": 32
+  },
+  "AudioFile": "fireball_cast.wav",
+  "requirements": {
+      "level": 1,
+      "magicPower": 1,
+      "Strength": 0,
+      "physicalDefence": 0,
+      "magicDefence": 0,
+      "elementalAlignment": "None"
+    }
+}

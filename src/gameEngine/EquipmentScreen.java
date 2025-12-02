@@ -13,7 +13,6 @@ import javafx.scene.text.Font;
 public class EquipmentScreen extends StatusScreen{
 
 	private BufferedImage equipmentScreen;
-	private String[] slotType = {"Helmet","Chest","Legs","LeftHand","RightHand"};
 	private int counter;
 	
 	public EquipmentScreen(Entity entityRef) {
@@ -28,63 +27,12 @@ public class EquipmentScreen extends StatusScreen{
 		}catch(Exception e) {e.printStackTrace();}
 		
 		//sets all the values for the Equipment Screen
-		super.setMaxSelected(new Vector2(0,4));
+		super.setMaxSelected(new Vector2(1,5));
 		super.setBackgroundImage(SwingFXUtils.toFXImage(equipmentScreen, null));
 		super.setItemSlots(new Item[(int)super.getMaxSelected().X][(int)super.getMaxSelected().Y]);
 	}
 	
-	/**
-	 * Adds an Item to a set slot 
-	 * @param item
-	 */
-	public void AddToSlot(Item item) {
-		if(super.isSelecting())
-		{
-			switch((int)(super.getCurrentSelected().Y))
-			{
-			case 1:
-				SlotNumber(item, 0);
-				break;
-			case 2:
-				SlotNumber(item, 1);
-				break;
-			case 3:
-				SlotNumber(item, 2);
-				break;
-			case 4:
-				SlotNumber(item, 3);
-				break;
-			case 5:
-				SlotNumber(item, 4);
-				break;
-			}
-		}
-	}
 
-	/**
-	 * Adds an item to a specific slot number
-	 * @param item
-	 * @param slotNumber
-	 */
-	private void SlotNumber(Item item, int slotNumber) {
-		if(item.getType() == slotType[slotNumber])
-		{
-			//If there is no item in the current slot
-			if(super.getItemSlots()[(int)super.getCurrentSelected().X][(int)super.getCurrentSelected().Y]
-					 == null)
-			{
-				//Set the item to the slot
-				super.setItemAtSetSlot(item, super.getCurrentSelected());
-			}
-			
-			//If there is an item in the slot
-			else {
-				super.setSelectedItem(super.getItemSlots()[(int)super.getCurrentSelected().X][(int)super.getCurrentSelected().Y]);
-				super.setItemAtSetSlot(item, getCurrentSelected());
-			}
-		}
-	}
-	
 	private void drawArmorSlotInformation(GraphicsContext gc) {
 		
 		Font defaultFont = Font.getDefault();
@@ -95,17 +43,15 @@ public class EquipmentScreen extends StatusScreen{
 		//set item name on screen
 		gc.setFill(Color.WHITE);
 		
-		//Displays the names and buff of armor pieces
-		gc.fillText("Berserker Warhelm", super.getBackgroundPosition().X+75, super.getBackgroundPosition().Y+70);
-		gc.fillText("+5 Attack", super.getBackgroundPosition().X+75, super.getBackgroundPosition().Y+90);
-		gc.fillText("Berserker WarPlate", super.getBackgroundPosition().X+75, super.getBackgroundPosition().Y+110);
-		gc.fillText("+5 Attack", super.getBackgroundPosition().X+75, super.getBackgroundPosition().Y+130);
-		gc.fillText("Berserker WarLegs", super.getBackgroundPosition().X+75, super.getBackgroundPosition().Y+150);
-		gc.fillText("+5 Attack", super.getBackgroundPosition().X+75, super.getBackgroundPosition().Y+170);
-		gc.fillText("Berserker Sword", super.getBackgroundPosition().X+75, super.getBackgroundPosition().Y+190);
-		gc.fillText("+5 Attack", super.getBackgroundPosition().X+75, super.getBackgroundPosition().Y+210);
-		gc.fillText("Berserker Shield", super.getBackgroundPosition().X+75, super.getBackgroundPosition().Y+230);
-		gc.fillText("+5 Attack", super.getBackgroundPosition().X+75, super.getBackgroundPosition().Y+250);
+		//Displays the names and buff of armor pieces		
+		for(int y = 0; y < super.getMaxSelected().Y; y++) {
+			//If there is an item in the slot, draw its name and buff
+			if(super.getItemSlots()[0][y] != null) {
+				gc.fillText(super.getItemSlots()[0][y].getName(), super.getBackgroundPosition().X+75, super.getBackgroundPosition().Y+70+(y*40));
+				gc.fillText(String.format("+ %d %s",(int)super.getItemSlots()[0][y].getEffects().getAmount(), 
+						super.getItemSlots()[0][y].getEffects().getTarget()), super.getBackgroundPosition().X+75, super.getBackgroundPosition().Y+90+(y*40));
+			}
+		}
 		
 		gc.setFill(Color.BLACK);
 		gc.setFont(defaultFont);
@@ -163,6 +109,19 @@ public class EquipmentScreen extends StatusScreen{
 	@Override
 	public void Draw(GraphicsContext gc) {
 		super.Draw(gc);
+		
+		for(int x = 0; x < super.getMaxSelected().X; x++) {
+			for(int y = 0; y < super.getMaxSelected().Y; y++) {
+				//If there is an item in the slot, draw it
+				if(super.getItemSlots()[x][y] != null) {
+					
+					//draw the item image
+					gc.drawImage(super.getItemSlots()[x][y].getImage(),super.getBackgroundPosition().X+30,
+							super.getBackgroundPosition().Y+60+(y*40),30,30);
+				}
+			}
+		}
+		
 		drawInformation(gc);
 		drawArmorSlotInformation(gc);
 	}

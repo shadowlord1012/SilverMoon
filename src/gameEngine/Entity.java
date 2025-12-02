@@ -55,6 +55,7 @@ public class Entity {
 		private transient Vector2 Position = new Vector2(200,200); // Position of the entity
 		public transient boolean isMoving;  // is the entity Moving 
 		public transient boolean IsActive;  // is the entity alive 
+		private transient int lastKnownDirection;
 		
 		@SerializedName("AbilityTotal")
 		private int abilityTotal;
@@ -157,9 +158,10 @@ public class Entity {
 		
 		public void loadAbilities(List<Abilities> allAbilities) {
 			allAbilities.forEach(ability -> {
-				for(int i = 0; i < abilityNames.length; i++) {
-					if(ability.getName().toLowerCase() == abilityNames[i].toLowerCase()) {
-						usableAbilities[i] = ability;
+				for(int i = 0; i < getAbilityNames().length; i++) {
+					if(ability.getName().toLowerCase() == getAbilityNames()[i].toLowerCase()) {
+						getUsableAbilities()[i] = ability;
+						System.out.println("Loaded ability: " + ability.getName() + " for entity: " + this.getName());
 					}
 				}
 			});
@@ -173,6 +175,8 @@ public class Entity {
 		 * @return if it was completed correctly
 		 */
 		public void changeStatusByPair(String key, double value) {
+			
+			// checks if the key is magiccurrent or healthcurrent to make sure it does not go over the max or under 0
 			if(key == "magiccurrent") {
 				if(status.get(key)+value > status.get("Magic"))
 				{
@@ -197,7 +201,7 @@ public class Entity {
 					status.put(key,0.0);
 				}
 				else {
-					status.put(key, status.get(key)+value);
+					status.put(key, (status.get(key).doubleValue()+value));
 				}
 			}
 			else {
@@ -224,7 +228,7 @@ public class Entity {
 			this.renderingCounter[1] = 0;
 		}
 		
-		for(Abilities ability : usableAbilities){
+		for(Abilities ability : getUsableAbilities()){
 			if(ability != null) {
 				ability.Update(this);
 			}
@@ -255,7 +259,7 @@ public class Entity {
 			
 		}
 		
-		for(Abilities ability : usableAbilities){
+		for(Abilities ability : getUsableAbilities()){
 			if(ability != null) {
 				if(ability.IsActive()) {
 					ability.Draw(gc);
@@ -274,5 +278,41 @@ public class Entity {
 	 */
 	public void setGold(int gold) {
 		this.gold = gold;
+	}
+	/**
+	 * @return the lastKnownDirection
+	 */
+	public int getLastKnownDirection() {
+		return lastKnownDirection;
+	}
+	/**
+	 * @param lastKnownDirection the lastKnownDirection to set
+	 */
+	public void setLastKnownDirection(int lastKnownDirection) {
+		this.lastKnownDirection = lastKnownDirection;
+	}
+	/**
+	 * @return the abilityNames
+	 */
+	public String[] getAbilityNames() {
+		return abilityNames;
+	}
+	/**
+	 * @param abilityNames the abilityNames to set
+	 */
+	public void setAbilityNames(String[] abilityNames) {
+		this.abilityNames = abilityNames;
+	}
+	/**
+	 * @return the usableAbilities
+	 */
+	public Abilities[] getUsableAbilities() {
+		return usableAbilities;
+	}
+	/**
+	 * @param usableAbilities the usableAbilities to set
+	 */
+	public void setUsableAbilities(Abilities[] usableAbilities) {
+		this.usableAbilities = usableAbilities;
 	}
 }

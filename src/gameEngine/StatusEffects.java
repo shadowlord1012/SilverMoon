@@ -41,4 +41,35 @@ public class StatusEffects {
 		this.amount = amount;
 		this.duration = duration;
 	}
+	
+	public void ApplyEffect(Entity entity) {
+		
+		// determine which status to apply the effect to
+		switch(targetStatus) {
+			case "Health":
+				
+				// applies to current health only
+				if(duration == 1)
+					// apply to current health
+					entity.changeStatusByPair("healthcurrent", amount);
+				
+				break;
+				
+			case "Magic":
+				
+				// applies to current magic only
+				if(duration == 1)
+					// apply to current magic
+					entity.changeStatusByPair("magiccurrent", amount);
+				
+				break;
+				
+			default:
+				
+				// for other status effects like Strength, Defense, etc.
+				entity.changeStatusByPair(targetStatus, amount);
+				
+				break;
+		}
+	}
 }

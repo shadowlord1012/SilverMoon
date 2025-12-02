@@ -107,12 +107,22 @@ public class Collision {
 			{
 				if(entityRec.intersects(itemRec))
 				{
+					if(item.getType().equals("Gold"))
+					{
+						player.setGold(player.getGold()+item.getEffects().getAmount());
+						item.setPosition(new Vector2(-500, -500)); //move the item off screen
+						return;
+					}
+					else {
 					player.statusScreenController.getInventoryScreen().AddItemToInventory(item);
 					item.setPosition(new Vector2(-500, -500)); //move the item off screen
 					return;
+					}
 				}
 			}
 		}
 				
 	}
+	
+	
 }

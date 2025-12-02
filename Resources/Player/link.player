@@ -5,7 +5,8 @@
     "Magic": 10,
     "Level": 1,
     "Attack": 5,
-    "Defence": 5
+    "Defence": 5,
+    "MagicPower": 1
   },
   "Gold": 1325462,
   "Items": {},
@@ -22,6 +23,10 @@
     "height": 40
   },
   "SpriteSheetPath": "C:\\Users\\mikek\\Documents\\SilverMoon\\Resources\\Player\\Link.png",
+  "AbilityTotal": 3,
+  "AbilityNames": [
+    "FireBallL1"
+  ],
   "Seconds": 0,
   "Minutes": 0,
   "Hours": 0

@@ -53,7 +53,7 @@ public class Engine implements Runnable{
 		player.IsActive = true;
 		player.setHUD(new HeadsUpDisplay(player));
 		player.getStatusMap().put("magiccurrent", 10.0);
-		player.getStatusMap().put("healthcurrent",  10.0);
+		player.getStatusMap().put("healthcurrent",  2.0);
 			
 		//Starts the game timer to keep track of time played
 		Global.GAME_TIME = new gameEngine.GameTime();
@@ -68,8 +68,6 @@ public class Engine implements Runnable{
 		try {
 			Global.ITEM_DIRECTORY = itemListLoading.get();
 			System.out.println("Items Loaded: " + Global.ITEM_DIRECTORY.size());
-			Global.ITEM_DIRECTORY.forEach(item -> item.LoadImage());
-			player.statusScreenController.getInventoryScreen().AddItemToInventory(Global.ITEM_DIRECTORY.get(0));
 			
 		}catch(Exception e) {e.printStackTrace();}
 		
@@ -78,7 +76,9 @@ public class Engine implements Runnable{
 			world.currentLevel(Global.CURRENT_LEVEL).LoadLevelData();
 			//adds it to the directory
 			gameWorldDirectory.put("Map1", world);
-			
+			//adds starting items to the player inventory
+			player.statusScreenController.getInventoryScreen()
+					.AddItemToInventory(Global.ITEM_DIRECTORY.stream().filter(item -> item.getName().equals("HealthPotionOne")).findFirst().orElse(null));
 			//creates the graphics controller
 			graphics = new GraphicsController(gameWorldDirectory,player);
 

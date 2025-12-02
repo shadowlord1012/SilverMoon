@@ -24,10 +24,14 @@ public class Abilities {
 	private String elementalType;
 	
 	@SerializedName("duration")
-	private int[] duration;
+	private int maxDuration;
+	
+	private transient int[] duration = {0,maxDuration};
 
 	@SerializedName("cooldown")
-	private int[] cooldown;
+	private int maxCooldown;
+	
+	private transient int[] cooldown = {0,maxCooldown};
 	
 	@SerializedName("magicCost")
 	private int magicCost;
@@ -53,6 +57,7 @@ public class Abilities {
 	private boolean isOnCooldown;
 	private boolean isMoving;
 	private boolean isActive;
+	private transient int direction;
 	
 	public String getName() { return name;}
 	public String getType() { return type;}
@@ -77,9 +82,9 @@ public class Abilities {
 	/***
 	 * Loads in the image 
 	 */
-	public void loadImage() {
+	public void LoadImage() {
 		try {
-			img = ImageIO.read(new File("Resources/Abilities/"+name+".png"));
+			img = ImageIO.read(new File("Resources/Images/Abilities/"+name+".png"));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -95,11 +100,13 @@ public class Abilities {
 		if(cooldown[0] >= cooldown[1]) {
 			isOnCooldown = false;
 			cooldown[0] = cooldown[1];
+			System.out.println("Ability "+name+" is off cooldown.");
 		}
 		
 		if(!isMoving)
 		{
 			position = new Vector2(ownerRef.getPosition().X, ownerRef.getPosition().Y);
+			direction = ownerRef.getLastKnownDirection();
 		}
 		else {
 			
@@ -119,6 +126,23 @@ public class Abilities {
 			if(renderingCounter[1] >= numberOfImages.X-1)
 				renderingCounter[1] = 0;
 			
+			if(direction == 1) //Up
+			{
+				position.Y -= 5;
+			}
+			else if(direction == 2) //Left
+			{
+				position.X -= 5;
+			}
+			else if(direction == 3) //Down
+			{
+				position.Y += 5;
+			}
+			else if(direction == 4) //Right
+			{
+				position.X += 5;
+			}
+			
 			if(duration[0] >= duration[1])
 			{
 				duration[0] = 0;
@@ -127,7 +151,7 @@ public class Abilities {
 				renderingCounter[0] = 0;
 			}
 		}
-		//TODO: Add in movement code that is based off the entity class
+		
 	}
 	
 	public void Draw(GraphicsContext gc) {

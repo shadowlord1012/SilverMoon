@@ -43,13 +43,23 @@ public class InventoryScreen extends StatusScreen {
 					if(super.getItemSlots()[x][y] != null && !added) {
 						
 						//Check if the item names match
-						if(super.getItemSlots()[x][y].getName().toLowerCase().equals(item.getName().toLowerCase())) {
+						if(super.getItemSlots()[x][y].getName().toLowerCase().equals(item.getName().toLowerCase()) &&
+								super.getItemSlots()[x][y].getType().equals("Consumable")) {
 							
 							//If they do, add the quantity to the existing item
 							super.getItemSlots()[x][y].addQuantity(item.getQuantity());
+					
+							//Makes sure not to add it again in a different Slot
+							added = true;
+							x= (int) super.getMaxSelected().X; //Breaks the outer loop
+							y= (int) super.getMaxSelected().Y; //Breaks the inner loop
+							return;
+						}
+						else if(super.getItemSlots()[x][y].getName().toLowerCase().equals(item.getName().toLowerCase())) {
 							
-							System.out.println(String.format("Item: %s quantity increased by: %d. New Quantity: %d", 
-									item.getName(), item.getQuantity(), super.getItemSlots()[x][y].getQuantity()));
+							//If they do, add the quantity to the existing item
+							super.getItemSlots()[x][y].setQuantity(item.getQuantity());
+					
 							//Makes sure not to add it again in a different Slot
 							added = true;
 							x= (int) super.getMaxSelected().X; //Breaks the outer loop
@@ -69,7 +79,6 @@ public class InventoryScreen extends StatusScreen {
 					if(super.getItemSlots()[x][y] == null) {
 						super.setItemAtSetSlot(item, new Vector2(x,y));
 						added = true;
-						System.out.println(String.format("Item: %s added to Inventory at: %d , %d", item.getName(),x,y));
 						x= (int) super.getMaxSelected().X; //Breaks the outer loop
 						y= (int) super.getMaxSelected().Y; //Breaks the inner loop
 						return;
@@ -108,8 +117,9 @@ public class InventoryScreen extends StatusScreen {
 					gc.setFill(Color.WHITE);
 					
 					
-					//draw the quantity
-					gc.fillText(String.valueOf(super.getItemSlots()[x][y].getQuantity()),
+					if(super.getItemSlots()[x][y].getType().equals("Consumable")) 
+						//draw the quantity
+						gc.fillText(String.valueOf(super.getItemSlots()[x][y].getQuantity()),
 							super.getBackgroundPosition().X+60+(x*40),
 							super.getBackgroundPosition().Y+100+(y*40));
 					

@@ -1,12 +1,12 @@
 {
-  "Name": "HealthPotionOne",
-  "Type": "Consumable",
+  "Name": "BasicLegs",
+  "Type": "Legs",
   "Quantity": 1,
   "Effects" : {
-      "Name": "Health Boost",
-      "Duration": 1,
+      "Name": "Defence Boost",
+      "Duration": 0,
       "amount": 2,
-      "Target": "Health"
+      "Target": "Defence"
     },
   "Requirements": {
       "Level": 1,

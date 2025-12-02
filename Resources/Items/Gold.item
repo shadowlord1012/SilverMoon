@@ -1,12 +1,12 @@
 {
-  "Name": "HealthPotionOne",
-  "Type": "Consumable",
+  "Name": "Gold",
+  "Type": "Gold",
   "Quantity": 1,
   "Effects" : {
-      "Name": "Health Boost",
-      "Duration": 1,
-      "amount": 2,
-      "Target": "Health"
+      "Name": "",
+      "Duration": 0,
+      "amount": 100,
+      "Target": "Gold"
     },
   "Requirements": {
       "Level": 1,

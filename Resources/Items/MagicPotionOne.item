@@ -1,12 +1,12 @@
 {
   "Name": "MagicPotionOne",
-  "Type": "Item",
+  "Type": "Consumable",
   "Quantity": 1,
   "Effects" : {
-      "Name": "Health Boost",
-      "Duration": 30,
-      "amount": 1,
-      "Target": "Self"
+      "Name": "Magic Boost",
+      "Duration": 1,
+      "amount": 5,
+      "Target": "Magic"
     },
   "Requirements": {
       "Level": 1,

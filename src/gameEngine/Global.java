@@ -26,6 +26,9 @@ public class Global {
 	public static KeyCode SCREEN_MOVE_LEFT = KeyCode.Q; // Screen move left key
 	public static KeyCode SCREEN_MOVE_RIGHT = KeyCode.E; // Screen move right key
 	public static KeyCode OPEN_STATUS_SCREENS = KeyCode.TAB; // Open Status Screens key
+	public static KeyCode USE_ITEM = KeyCode.F; // Use Item key
+	public static KeyCode ABILITY_ACTION = KeyCode.C; // Ability Action key
+	public static KeyCode ABILITY_ALTERNATE = KeyCode.X; // Ability Alternate key
 	public static final DataLoader DATA_LOADER = new DataLoader(); // Global Data Loader
 	public static String CURRENT_LEVEL = "levelOne";
 	public static String TILE_MAP_NAME	 = "Map1";

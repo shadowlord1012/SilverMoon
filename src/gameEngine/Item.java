@@ -48,14 +48,6 @@ public class Item {
 	
 	public Item() {
 	}
-	
-	public void Initialize(String name, int quantity, StatusEffects targetEffect, String type, Requirements reqs) {
-		this.name = name;
-		this.quantity = quantity;
-		this.statusEffect = targetEffect;
-		this.type = type;
-		this.requirements = reqs;
-	}
 
 	public void LoadImage() {
 		
@@ -65,6 +57,41 @@ public class Item {
 			e.printStackTrace();
 		}
 	}
+	
+	public boolean useItem(Entity entity) {
+		
+		if(!type.equals("Consumable")) {
+			System.out.println("Item is not consumable");
+			return false;
+		}
+		
+		//Checks if there is any quantity left
+		if(quantity <= 0) {
+			return false;
+		}
+		
+		//Checks if the item can be used on the entity
+		if(statusEffect.getTarget().equals("Health")) {
+			if(entity.getStatusByName("healthcurrent") >= entity.getStatusByName("Health")) {
+				return false;
+			}
+		}
+		
+		if(statusEffect.getTarget().equals("Magic")) {
+			if(entity.getStatusByName("magiccurrent") >= entity.getStatusByName("Magic")) {
+				return false;
+			}
+		}
+		
+		//Applies the status effect to the player
+		statusEffect.ApplyEffect(entity);
+		
+		//Reduces the quantity by 1
+		quantity -= 1;
+		
+		return true;
+	}
+	
 	public Vector2 getPosition() {
 		return position;
 	}

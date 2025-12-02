@@ -24,11 +24,11 @@ public class StatusScreen {
 	private Vector2 maxSelected;
 	private int widthOffset;
 	private int heightOffset;
+	private String[] slotType = {"Helmet","Chest","Legs","LeftHand","RightHand"};
+	private String screenName;
 	
 	public StatusScreen(Entity entityRef) {
 		setEntity(entityRef);
-		
-		
 		
 		//Sets the position array
 		position = new Vector2[3]; //0 = Background, 1 = Cursor, 2 = Selected Item
@@ -51,11 +51,215 @@ public class StatusScreen {
 	public void OnChange(StatusScreen current, StatusScreen target) {
 		if(!current.isSelecting() )
 			return;
+		if(current.getSelectedItem() == null)
+			return;
 		
 		Item item = current.getSelectedItem();
 		current.setSelectedItem(null);
+		current.setSelecting(false);
 		target.setSelectedItem(item);
 		target.setSelecting(true);
+		
+	}	
+	
+	private void equipmentItems(int i) {
+		
+		switch(i) {
+		case 0:
+			//Picks up the item from the slot that its currently on.
+			setSelectedItem(getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y]);
+
+			entity.changeStatusByPair(getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y].getEffects().getTarget(),
+					-getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y].getEffects().getAmount());
+			//Empty the slot that the item was in
+			getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y] = null;
+				
+			//Sets the selecting boolean to true
+			setSelecting(true);
+			
+			break;
+		case 1:
+			if(getSelectedItem() == null)
+				return;
+			switch(slotType[(int)getCurrentSelected().Y])
+			{
+				case "Chest":
+					if(getSelectedItem().getType().equals("Chest"))
+					{
+						//Places the selected item into the current slot selected.
+						getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y] = getSelectedItem();
+						
+						//Sets the selected item to null
+						setSelectedItem(null);
+						
+						//Sets the selecting boolean to false
+						setSelecting(false);						
+						
+						entity.changeStatusByPair(getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y].getEffects().getTarget(),
+								getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y].getEffects().getAmount());
+					}
+				break;
+				case "Helmet":
+					if(getSelectedItem().getType().equals("Helmet"))
+					{
+						//Places the selected item into the current slot selected.
+						getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y] = getSelectedItem();
+						
+						//Sets the selected item to null
+						setSelectedItem(null);
+						
+						//Sets the selecting boolean to false
+						setSelecting(false);
+						entity.changeStatusByPair(getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y].getEffects().getTarget(),
+								getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y].getEffects().getAmount());
+					}
+					break;
+				case "Legs":
+					if(getSelectedItem().getType().equals("Legs"))
+					{
+						//Places the selected item into the current slot selected.
+						getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y] = getSelectedItem();
+							
+						//Sets the selected item to null
+						setSelectedItem(null);
+							
+						//Sets the selecting boolean to false
+						setSelecting(false);
+						entity.changeStatusByPair(getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y].getEffects().getTarget(),
+								getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y].getEffects().getAmount());
+					}
+					break;
+				case "LeftHand":
+					if(getSelectedItem().getType().equals("LeftHand"))
+					{
+						//Places the selected item into the current slot selected.
+						getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y] = getSelectedItem();
+								
+						//Sets the selected item to null
+						setSelectedItem(null);
+								
+						//Sets the selecting boolean to false
+						setSelecting(false);
+						entity.changeStatusByPair(getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y].getEffects().getTarget(),
+								getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y].getEffects().getAmount());
+					}
+					break;
+			case "RightHand":
+					if(getSelectedItem().getType().equals("RightHand"))
+					{
+					//Places the selected item into the current slot selected.
+					getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y] = getSelectedItem();
+									
+					//Sets the selected item to null
+					setSelectedItem(null);
+									
+					//Sets the selecting boolean to false
+					setSelecting(false);
+					entity.changeStatusByPair(getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y].getEffects().getTarget(),
+							getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y].getEffects().getAmount());
+				}
+				break;
+								
+			}
+			break;
+			case 2:
+				switch(slotType[(int)getCurrentSelected().Y])
+				{
+					case "Chest":
+						if(getSelectedItem().getType().equals("Chest"))
+						{
+							//Swaps the items
+							Item temp = getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y];
+							
+
+							entity.changeStatusByPair(getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y].getEffects().getTarget(),
+									-getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y].getEffects().getAmount());
+							
+							//Places the selected item into the current slot selected.
+							getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y] = getSelectedItem();
+							
+
+							entity.changeStatusByPair(getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y].getEffects().getTarget(),
+									getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y].getEffects().getAmount());
+							
+							//Sets the selected item to the temp item
+							setSelectedItem(temp);
+
+							setSelecting(true);
+						}
+					break;
+					case "Helmet":
+						if(getSelectedItem().getType().equals("Helmet"))
+						{
+							//Swaps the items
+							Item temp = getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y];
+							entity.changeStatusByPair(getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y].getEffects().getTarget(),
+									-getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y].getEffects().getAmount());
+							//Places the selected item into the current slot selected.
+							getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y] = getSelectedItem();
+							
+							entity.changeStatusByPair(getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y].getEffects().getTarget(),
+									getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y].getEffects().getAmount());
+							//Sets the selected item to the temp item
+							setSelectedItem(temp);
+
+							setSelecting(true);
+						}
+						break;
+					case "Legs":
+						if(getSelectedItem().getType().equals("Legs"))
+						{
+							//Swaps the items
+							Item temp = getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y];
+							entity.changeStatusByPair(getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y].getEffects().getTarget(),
+									-getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y].getEffects().getAmount());
+							//Places the selected item into the current slot selected.
+							getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y] = getSelectedItem();
+							
+							entity.changeStatusByPair(getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y].getEffects().getTarget(),
+									getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y].getEffects().getAmount());
+							//Sets the selected item to the temp item
+							setSelectedItem(temp);
+
+							setSelecting(true);
+						}
+						break;
+					case "LeftHand":
+						if(getSelectedItem().getType().equals("LeftHand"))
+						{
+							//Swaps the items
+							Item temp = getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y];
+							entity.changeStatusByPair(getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y].getEffects().getTarget(),
+									-getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y].getEffects().getAmount());
+							//Places the selected item into the current slot selected.
+							getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y] = getSelectedItem();
+							entity.changeStatusByPair(getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y].getEffects().getTarget(),
+									getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y].getEffects().getAmount());
+							//Sets the selected item to the temp item
+							setSelectedItem(temp);
+
+							setSelecting(true);
+						}
+						break;
+				case "RightHand":
+						if(getSelectedItem().getType().equals("RightHand"))
+						{
+							//Swaps the items
+							Item temp = getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y];
+							
+							//Places the selected item into the current slot selected.
+							getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y] = getSelectedItem();
+							entity.changeStatusByPair(getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y].getEffects().getTarget(),
+									getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y].getEffects().getAmount());
+							//Sets the selected item to the temp item
+							setSelectedItem(temp);
+
+							setSelecting(true);
+						}
+					break;			
+				}
+				break;
+		}
 		
 	}
 	
@@ -97,44 +301,83 @@ public class StatusScreen {
 					getCurrentSelected().X = 0;
 			}
 			if(KeyHandlerController.Action && delayCounter.X == delayCounter.Y && isSelectingAllowed && delayCounter.X == delayCounter.Y) {
-				if(getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y] != null && !isSelecting()) {
-					
-					//Picks up the item from the slot that its currently on.
-					setSelectedItem(getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y]);
+				if(getItemSlots() != null)
+					if(getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y] != null && !isSelecting()) {
 						
-					//Empty the slot that the item was in
-					getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y] = null;
+						if(screenName.equals("Equipment"))
+						{
+							equipmentItems(0);
+						}
+						else if(screenName.equals("Inventory"))
+						{
+							//Picks up the item from the slot that its currently on.
+							setSelectedItem(getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y]);
+								
+							//Empty the slot that the item was in
+							getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y] = null;
+								
+							//Sets the selecting boolean to true
+							setSelecting(true);
+						}
+	
+					}
+					else if(getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y] == null && isSelecting()) {
+						if(screenName.equals("Equipment"))
+						{
+							equipmentItems(1);
+						}
+						else if(screenName.equals("Inventory"))
+						{
+							//Places the selected item into the current slot selected.
+							getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y] = getSelectedItem();
+							
+							//Sets the selected item to null
+							setSelectedItem(null);
+							
+							//Sets the selecting boolean to false
+							setSelecting(false);
+						}
+					}
+					else if (getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y] != null && isSelecting()) {
 						
-					//Sets the selecting boolean to true
-					setSelecting(true);
+						if(screenName.equals("Equipment"))
+						{
+							equipmentItems(2);
+						}
+						else if(screenName.equals("Inventory"))
+						{
+							//Swaps the items
+							Item temp = getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y];
+							
+							//Places the selected item into the current slot selected.
+							getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y] = getSelectedItem();
+							
+							//Sets the selected item to the temp item
+							setSelectedItem(temp);
 
-				}
-				else if(getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y] == null && isSelecting()) {
-
-					//Places the selected item into the current slot selected.
-					getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y] = getSelectedItem();
+							setSelecting(true);
+						}
+						
+					}
+					else {
+						
+					}
+				delayCounter.X = 0;
+			}
+			
+			if(isSelecting && KeyHandlerController.UseItem && delayCounter.X == delayCounter.Y) {
+				if(getSelectedItem() != null) {
+					//Uses the selected item on the entity
+					if(getSelectedItem().useItem(getEntity()))
+						System.out.println("Used "+getSelectedItem().getName()+" on "+getEntity().getName());
+					else
+						System.out.println("Failed to use "+getSelectedItem().getName()+" on "+getEntity().getName());
 					
-					//Sets the selected item to null
-					setSelectedItem(null);
-					
-					//Sets the selecting boolean to false
-					setSelecting(false);
-				}
-				else if (getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y] != null && isSelecting()) {
-					
-					//Swaps the items
-					Item temp = getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y];
-					
-					//Places the selected item into the current slot selected.
-					getItemSlots()[(int) getCurrentSelected().X][(int) getCurrentSelected().Y] = getSelectedItem();
-					
-					//Sets the selected item to the temp item
-					setSelectedItem(temp);
-					
-					setSelecting(true);
-				}
-				else {
-					
+					//If the quantity is 0 after using the item, it removes it from the selection
+					if(getSelectedItem().getQuantity() <= 0) {
+						setSelectedItem(null);
+						setSelecting(false);
+					}
 				}
 				delayCounter.X = 0;
 			}
@@ -326,5 +569,19 @@ public class StatusScreen {
 	 */
 	public void setHeightOffset(int heightOffset) {
 		this.heightOffset = heightOffset;
+	}
+
+	/**
+	 * @return the screenName
+	 */
+	public String getScreenName() {
+		return screenName;
+	}
+
+	/**
+	 * @param screenName the screenName to set
+	 */
+	public void setScreenName(String screenName) {
+		this.screenName = screenName;
 	}
 }
