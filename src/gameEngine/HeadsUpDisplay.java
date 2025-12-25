@@ -10,6 +10,11 @@ import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 
+/** TODO: Note Add in display for experience bar, and level number
+ * Which abilities are equipped and ready to use. 
+ * 
+ */
+
 public class HeadsUpDisplay {
 	
 	@SuppressWarnings("unused")
@@ -75,6 +80,7 @@ public class HeadsUpDisplay {
 	
 	public void Draw(GraphicsContext gc) {
 		
+		//health bar center
 		for(double x = 0; x < (30*(healthDif[0]/healthDif[1])); x++)
 		{
 			gc.drawImage(healthBarCenterFX[rendering[(int)(1+x)]],

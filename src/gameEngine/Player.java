@@ -15,18 +15,26 @@ public class Player extends Entity{
 	private int hours;
 	
 	private transient HeadsUpDisplay hud;
+	private transient Audio audioRef;
+	
+	//current Ability is use
+	private transient Ability currentAbility;
 	
 	public HeadsUpDisplay getHUD() { return hud;}
 	
 	public transient StatusScreenController statusScreenController;
 	
 	public void setHUD(HeadsUpDisplay value) { hud = value;}
-	
+	public void setAudioRef(Audio value) { audioRef = value;}
+	public void setCurrentAbility(Ability value) { currentAbility = value;}
+	public Ability getCurrentAbility() { return currentAbility;}
 	
 	public Player() {
 		super();
 		this.SetRow(6);
 		statusScreenController = new StatusScreenController(this);
+		String [] abilityNames = {"FireballL1","Ice Shard","Heal"};
+		this.setAbilityNames(abilityNames);
 	}
 	
 	/**
@@ -158,8 +166,24 @@ public class Player extends Entity{
 	}
 	
 	private void useAbility(World w) {
-		if(KeyHandlerController.UseAbility && !this.getUsableAbilities()[0].IsOnCoolDown()) {
-			System.out.println("Using Ability");
+		
+		if(KeyHandlerController.UseAbility && !currentAbility.IsOnCoolDown()) {
+			System.out.println("Ability in slot 0: " + currentAbility.getName());
+			
+			// resets the cooldown counter to 0 to use the ability
+			currentAbility.getCooldown()[0] = 0; 
+			
+			// sets the ability to be on cooldown
+			currentAbility.setOnCoolDown(true); 
+			
+			// sets the ability to be moving
+			currentAbility.setIsActive(true);
+			
+			// sets the ability to be moving
+			currentAbility.setIsMoving(true); 
+			
+			// plays the sound effect of the ability
+			audioRef.playSE(this.getUsableAbilities()[0].getAudioFile());
 		}
 	}
 	

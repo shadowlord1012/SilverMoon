@@ -58,13 +58,13 @@ public class Entity {
 		private transient int lastKnownDirection;
 		
 		@SerializedName("AbilityTotal")
-		private int abilityTotal;
+		private int abilityTotal=3;
 		
 		@SerializedName("AbilityNames")
 		private String[] abilityNames;
 		
 		//The total number of abilities the entity has
-		private transient Abilities[] usableAbilities = new Abilities[abilityTotal];
+		private transient Ability[] usableAbilities = new Ability[abilityTotal];
 		
 		//Getter Methods
 		public String getName() {return name;} 
@@ -156,15 +156,20 @@ public class Entity {
 			return false;
 		}
 		
-		public void loadAbilities(List<Abilities> allAbilities) {
+		public void loadAbilities(List<Ability> allAbilities) {
 			allAbilities.forEach(ability -> {
 				for(int i = 0; i < getAbilityNames().length; i++) {
-					if(ability.getName().toLowerCase() == getAbilityNames()[i].toLowerCase()) {
-						getUsableAbilities()[i] = ability;
+					
+					if(i > usableAbilities.length)
+						break;
+					
+					if(ability.getName().toLowerCase().equals(getAbilityNames()[i].toLowerCase())) {
+						usableAbilities[i] = ability;
 						System.out.println("Loaded ability: " + ability.getName() + " for entity: " + this.getName());
 					}
 				}
 			});
+			
 		}
 		
 		
@@ -228,7 +233,7 @@ public class Entity {
 			this.renderingCounter[1] = 0;
 		}
 		
-		for(Abilities ability : getUsableAbilities()){
+		for(Ability ability : getUsableAbilities()){
 			if(ability != null) {
 				ability.Update(this);
 			}
@@ -257,14 +262,6 @@ public class Entity {
 					this.imgRect.width*Global.SCALE,
 					this.imgRect.height*Global.SCALE);
 			
-		}
-		
-		for(Abilities ability : getUsableAbilities()){
-			if(ability != null) {
-				if(ability.IsActive()) {
-					ability.Draw(gc);
-				}
-			}
 		}
 	}
 	/**
@@ -306,13 +303,13 @@ public class Entity {
 	/**
 	 * @return the usableAbilities
 	 */
-	public Abilities[] getUsableAbilities() {
+	public Ability[] getUsableAbilities() {
 		return usableAbilities;
 	}
 	/**
 	 * @param usableAbilities the usableAbilities to set
 	 */
-	public void setUsableAbilities(Abilities[] usableAbilities) {
+	public void setUsableAbilities(Ability[] usableAbilities) {
 		this.usableAbilities = usableAbilities;
 	}
 }

@@ -12,7 +12,7 @@ import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 
-public class Abilities {
+public class Ability{
 	
 	@SerializedName("name")
 	private String name;
@@ -26,7 +26,7 @@ public class Abilities {
 	@SerializedName("duration")
 	private int maxDuration;
 	
-	private transient int[] duration = {0,maxDuration};
+	private transient int[] duration = {0,maxDuration};	
 
 	@SerializedName("cooldown")
 	private int maxCooldown;
@@ -43,7 +43,7 @@ public class Abilities {
 	private Vector2 numberOfImages;
 	
 	@SerializedName("ImageRectangle")
-	private Rectangle imgRect;
+	private Rectangle imgRect = new Rectangle(0,0,32,32);
 	
 	@SerializedName("AudioFile")
 	private String audioFile;
@@ -51,7 +51,7 @@ public class Abilities {
 	@SerializedName("requirements")
 	private Requirements requirements;
 	
-	private int[] renderingCounter = {0,0};
+	private int[] renderingCounter = {0,0,0};
 	private transient Vector2 position;
 	private transient BufferedImage img;
 	private boolean isOnCooldown;
@@ -72,10 +72,27 @@ public class Abilities {
 	public void setAudioFile(String value) {audioFile = value;}
 	public void setDuration(int[] value) {duration = value;}
 	public void setPosition(Vector2 value) {position = value;}
+	public void setOnCoolDown(boolean value) {isOnCooldown = value;}
+	public void setIsActive(boolean value) {isActive = value;}
+	public void setIsMoving(boolean value) {isMoving = value;}
 	public boolean IsOnCoolDown() {return isOnCooldown;}
 	public boolean IsActive() {return isActive;}
+	public int[] getCooldown() {return cooldown;}
+	public void setCooldown(int[] value) {cooldown = value;}
 	
-	public Abilities() {
+	public int getMaxDuration() {
+		return maxDuration;
+	}
+	public void setMaxDuration(int maxDuration) {
+		this.maxDuration = maxDuration;
+	}
+	public int getMaxCooldown() {
+		return maxCooldown;
+	}
+	public void setMaxCooldown(int maxCooldown) {
+		this.maxCooldown = maxCooldown;
+	}
+	public Ability() {
 		
 	}
 	
@@ -96,11 +113,12 @@ public class Abilities {
 	 */
 	public void Update(Entity ownerRef) {
 		
+		//increasing the cooldown counter
 		cooldown[0]++;
+		//checking if the ability is off cooldown
 		if(cooldown[0] >= cooldown[1]) {
 			isOnCooldown = false;
 			cooldown[0] = cooldown[1];
-			System.out.println("Ability "+name+" is off cooldown.");
 		}
 		
 		if(!isMoving)
@@ -116,33 +134,6 @@ public class Abilities {
 			//increasing the duration counter
 			duration[0]++;
 			
-			//if the counter reaches a limit, it resets and adjusts the image counter
-			if(renderingCounter[0] >= 3) {
-				renderingCounter[0] = 0;
-				renderingCounter[1]++;
-			}
-			
-			//once the image counter reaches the max it resets to the beginning
-			if(renderingCounter[1] >= numberOfImages.X-1)
-				renderingCounter[1] = 0;
-			
-			if(direction == 1) //Up
-			{
-				position.Y -= 5;
-			}
-			else if(direction == 2) //Left
-			{
-				position.X -= 5;
-			}
-			else if(direction == 3) //Down
-			{
-				position.Y += 5;
-			}
-			else if(direction == 4) //Right
-			{
-				position.X += 5;
-			}
-			
 			if(duration[0] >= duration[1])
 			{
 				duration[0] = 0;
@@ -150,6 +141,43 @@ public class Abilities {
 				isOnCooldown = true;
 				renderingCounter[0] = 0;
 			}
+			
+			//if the counter reaches a limit, it resets and adjusts the image counter
+			if(renderingCounter[0] >= 5) {
+				renderingCounter[0] = 0;
+				renderingCounter[1]++;
+			}
+			
+			//once the image counter reaches the max it resets to the beginning
+			if(renderingCounter[1] >= numberOfImages.X)
+				renderingCounter[1] = 0;
+			
+			if(direction == 1) //Up
+			{
+				renderingCounter[2] = 2;
+				position.Y -= 5;
+			}
+			else if(direction == 2) //Left
+			{
+				renderingCounter[2] = 0;
+				position.X += 5;
+			}
+			else if(direction == 3) //Down
+			{
+				renderingCounter[2] = 3;
+				position.Y += 5;
+			}
+			else if(direction == 4) //Right
+			{
+				renderingCounter[2] = 1;
+				position.X -= 5;
+			}
+			
+			System.out.println("Ability Position: "+position.X+", "+position.Y);
+			System.out.println("Ability Direction: "+direction);
+			System.out.println("Image Counter: "+renderingCounter[1]);
+			
+			
 		}
 		
 	}
@@ -158,8 +186,10 @@ public class Abilities {
 		if(isMoving && img != null) {
 			Image fxImg = SwingFXUtils.toFXImage(
 					img.getSubimage(
-						imgRect.width*renderingCounter[1], 
-						0, imgRect.width, imgRect.height), 
+							(int)(img.getWidth()/numberOfImages.X)*renderingCounter[1], 
+						(int)(img.getHeight()/numberOfImages.Y)*renderingCounter[2],
+						(int)(img.getWidth()/numberOfImages.X), 
+						(int)(img.getHeight()/numberOfImages.Y)), 
 						null);
 			
 			gc.drawImage(fxImg, 

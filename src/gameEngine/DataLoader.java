@@ -23,13 +23,13 @@ public class DataLoader {
 		
 	}
 	
-	public Future<List<Abilities>> loadAbilities(){
+	public Future<List<Ability>> loadAbilities(){
 		
 		//creates a call function to be executed at a later time
-		Callable<List<Abilities>> loadingAbilities = () -> {
+		Callable<List<Ability>> loadingAbilities = () -> {
 			
 			//creates an list of all the abilities
-			List<Abilities> abilityList = new ArrayList<>();
+			List<Ability> abilityList = new ArrayList<>();
 			
 			//gets all the files in the Abilities directory
 			File directory = new File("Resources/Abilities/");
@@ -50,7 +50,7 @@ public class DataLoader {
 						Gson gson = new GsonBuilder().create();
 						
 						//add to the ability to the list though the converting of a json file to ability class through gson
-						abilityList.add(gson.fromJson(reader, Abilities.class));
+						abilityList.add(gson.fromJson(reader, Ability.class));
 						
 					} catch (Exception e) {
 						e.printStackTrace();

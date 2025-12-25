@@ -38,4 +38,5 @@ public class Global {
 	public static Font DEFAULT_FONT = Font.getDefault();
 	public static GameTime GAME_TIME;
 	public static List<Item> ITEM_DIRECTORY = new ArrayList<Item>();
+	public static List<Ability> ABILITY_DIRECTORY = new ArrayList<Ability>();
 }

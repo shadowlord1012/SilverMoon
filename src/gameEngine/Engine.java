@@ -15,7 +15,7 @@ public class Engine implements Runnable{
 
 	private GraphicsContext gc;
 	private Map<String,World> gameWorldDirectory = new HashMap<>();
-	private List<Abilities> abilityDirectory = new ArrayList<Abilities>();
+	private List<Ability> abilityDirectory = new ArrayList<Ability>();
 	private String worldName = "Map1";
 	private Player player;
 	private GraphicsController graphics;
@@ -29,6 +29,7 @@ public class Engine implements Runnable{
 	private double delta = 0;
 	
 	public Audio getAudio() {return audio;}
+	public Player getPlayer() {return player;}
 	public void setAudio(Audio value) {audio = value;}
 	public GraphicsContext getGraphics() {return gc;}
 	public void setGraphics(GraphicsContext value) { gc = value;}
@@ -44,7 +45,7 @@ public class Engine implements Runnable{
 	private void Initialize() {
 		//TODO : Add in information from the data loader
 		
-		Future<List<Abilities>> abilitiesListLoading = Global.DATA_LOADER.loadAbilities();
+		Future<List<Ability>> abilitiesListLoading = Global.DATA_LOADER.loadAbilities();
 		Future<List<Item>> itemListLoading = Global.DATA_LOADER.loadItems();
 		
 		
@@ -79,6 +80,17 @@ public class Engine implements Runnable{
 			//adds starting items to the player inventory
 			player.statusScreenController.getInventoryScreen()
 					.AddItemToInventory(Global.ITEM_DIRECTORY.stream().filter(item -> item.getName().equals("HealthPotionOne")).findFirst().orElse(null));
+			System.out.println("loading player abilities");
+			player.loadAbilities(abilityDirectory);
+			for(Ability ability : player.getUsableAbilities()) {
+				if(ability != null) {
+					System.out.println("Loaded Ability: " + ability.getName());
+					ability.getCooldown()[1] = ability.getMaxCooldown();
+					ability.getDuration()[1] = ability.getMaxDuration();
+					ability.LoadImage();
+				}
+			}
+			player.setCurrentAbility(player.getUsableAbilities()[0]);
 			//creates the graphics controller
 			graphics = new GraphicsController(gameWorldDirectory,player);
 

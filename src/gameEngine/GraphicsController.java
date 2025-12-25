@@ -35,6 +35,8 @@ public class GraphicsController {
 			.getTileMap(Global.TILE_MAP_NAME) //gets the map of the level
 				.getTileLayers() //gets all the layers in that map on the level
 				.forEach((layer,map) -> {
+					
+					//Draw the bottom layer first
 					if(layer.toLowerCase().equals("bottom"))
 					{
 						for(int i = 0; i < xTiles; i++) {
@@ -49,6 +51,8 @@ public class GraphicsController {
 							}
 						}
 					}
+					
+					//Draws the middle layer of the tile map
 					if(layer.toLowerCase().equals("middle"))
 					{
 						for(int i = 0; i < xTiles; i++) {
@@ -63,6 +67,7 @@ public class GraphicsController {
 							}
 						}
 					}
+					//Draw transparent layer
 					if(layer.toLowerCase().equals("transport"))
 					{
 						for(int i = 0; i < xTiles; i++) {
@@ -82,6 +87,8 @@ public class GraphicsController {
 					//Draw the player on the screen
 					player.Draw(gc);
 					
+					
+					
 					//TODO: once monsters are to be added in.
 					/*
 					monster.forEach(e -> {
@@ -98,6 +105,7 @@ public class GraphicsController {
 					});
 					*/
 					
+					//Draw the top layer of the map
 					if(layer.toLowerCase().equals("top"))
 					{
 						for(int i = 0; i < xTiles; i++) {
@@ -113,7 +121,16 @@ public class GraphicsController {
 						}
 					}
 				});
+			
+			//Draw items on the level
 			level.currentLevel(Global.CURRENT_LEVEL).DrawItems(gc);
+			
+			//Draw player's current ability if active and there is an ability to draw
+			if(player.getCurrentAbility() != null) {
+				if(player.getCurrentAbility().IsActive()) {
+					player.getCurrentAbility().Draw(gc);
+				}
+			}
 		});
 		
 		hud.Draw(gc);

@@ -254,6 +254,7 @@ public class Main extends Application {
 			
 			
 			mainGameEngine.setAudio(audio);
+			mainGameEngine.getPlayer().setAudioRef(audio);
 			
 			mainGameEngine.getAudio().playBGM("FieldOne.wav");
 			onlyOnce = true;
