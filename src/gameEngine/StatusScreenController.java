@@ -2,6 +2,8 @@ package gameEngine;
 
 import javafx.scene.canvas.GraphicsContext;
 
+//TODO: Add in ability screen to the rotation
+
 public class StatusScreenController {
 
 	private InventoryScreen inventoryScreen;

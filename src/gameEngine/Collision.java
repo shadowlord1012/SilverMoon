@@ -1,7 +1,8 @@
 package gameEngine;
 
 import java.awt.Rectangle;
-import java.util.List;
+
+//TODO: Add in Ability collision
 
 public class Collision {
 	
