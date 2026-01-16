@@ -2,14 +2,15 @@ package gameEngine;
 
 import javafx.scene.canvas.GraphicsContext;
 
-//TODO: Add in ability screen to the rotation
 
 public class StatusScreenController {
 
 	private InventoryScreen inventoryScreen;
 	private EquipmentScreen equipmentScreen;
 	private QuestScreen questScreen;
-	private int currentScreen = 0; // 0 = Inventory, 1 = Equipment, 2 = Quest
+	private AbilityScreen abilityScreen;
+	private int maxNumberOfScreens = 3; // Has to be one less then the total number of screens
+	private int currentScreen = 0; // 0 = Inventory, 1 = Equipment, 2 = Quest, 3 = Ability
 	private int lastKnownScreen = 0;
 	private int[] counter = {0,20};
 	private boolean open = false;
@@ -18,6 +19,7 @@ public class StatusScreenController {
 		setInventoryScreen(new InventoryScreen(entity));
 		equipmentScreen = new EquipmentScreen(entity);
 		questScreen = new QuestScreen(entity);
+		abilityScreen = new AbilityScreen(entity);
 	}
 	
 	private void changeScreen() {
@@ -29,13 +31,15 @@ public class StatusScreenController {
 			//makes sure the other screens are closed
 			equipmentScreen.setOpen(false);
 			questScreen.setOpen(false);
+			abilityScreen.setOpen(false);
 			
 		    if(lastKnownScreen == 1) {
 		    	//Transfers selected item from equipment to inventory
 		    	getInventoryScreen().OnChange(equipmentScreen, getInventoryScreen());
-		    } else if(lastKnownScreen == 2) {
-		    	//Transfers selected item from quest to inventory
-		    	getInventoryScreen().OnChange(questScreen, getInventoryScreen());
+		    } 
+		    else if(lastKnownScreen == 3) {
+		    	//Transfers selected item from ability to inventory
+		    	getInventoryScreen().OnChange(abilityScreen, getInventoryScreen());
 		    }
 			
 			break;
@@ -46,6 +50,7 @@ public class StatusScreenController {
 			//makes sure the other screens are closed
 			getInventoryScreen().setOpen(false);
 			questScreen.setOpen(false);
+			abilityScreen.setOpen(false);
 			
 			if(lastKnownScreen == 0) {
 		    	//Transfers selected item from inventory to equipment
@@ -62,13 +67,31 @@ public class StatusScreenController {
 			//makes sure the other screens are closed
 			getInventoryScreen().setOpen(false);
 			equipmentScreen.setOpen(false);
+			abilityScreen.setOpen(false);
 			
-			if(lastKnownScreen == 0) {
-		    	//Transfers selected item from inventory to quest
-		    	questScreen.OnChange(getInventoryScreen(), questScreen);
+			if(lastKnownScreen == 3) {
+		    	//Transfers selected item from ability to quest
+		    	questScreen.OnChange(abilityScreen, questScreen);
 		    } else if(lastKnownScreen == 1) {
 		    	//Transfers selected item from equipment to quest
 		    	questScreen.OnChange(equipmentScreen, questScreen);
+		    }
+			break;
+		case 3:
+			//opens the ability screen
+			abilityScreen.setOpen(true);
+			abilityScreen.setScreenName("Abilities");
+			//makes sure the other screens are closed
+			getInventoryScreen().setOpen(false);
+			equipmentScreen.setOpen(false);
+			questScreen.setOpen(false);
+			
+			if(lastKnownScreen == 0) {
+		    	//Transfers selected item from inventory to ability
+		    	abilityScreen.OnChange(getInventoryScreen(), abilityScreen);
+		    } else if(lastKnownScreen == 2) {
+		    	//Transfers selected item from quest to ability
+		    	abilityScreen.OnChange(questScreen, abilityScreen);
 		    }
 			break;
 		default:
@@ -83,7 +106,7 @@ public class StatusScreenController {
 		if(counter[0] >=counter[1])
 			counter[0] = counter[1];
 
-		if(getInventoryScreen().isOpen() || equipmentScreen.isOpen() || questScreen.isOpen()) {
+		if(getInventoryScreen().isOpen() || equipmentScreen.isOpen() || questScreen.isOpen() || abilityScreen.isOpen()) {
 			
 			lastKnownScreen = currentScreen;
 			if(KeyHandlerController.ScreenMovement[0] && counter[0] == counter[1]) {
@@ -92,7 +115,7 @@ public class StatusScreenController {
 				
 				//Make sure it doesn't go out of bounds
 				if(currentScreen < 0)
-					currentScreen = 2;
+					currentScreen = maxNumberOfScreens;
 				
 				//resets the counter
 				counter[0] = 0;
@@ -106,7 +129,7 @@ public class StatusScreenController {
 				currentScreen++;
 				
 				//Make sure it doesn't go out of bounds
-				if(currentScreen > 2)
+				if(currentScreen > maxNumberOfScreens)
 					currentScreen = 0;
 				
 				//resets the counter
@@ -124,6 +147,7 @@ public class StatusScreenController {
 			getInventoryScreen().setOpen(false);
 			equipmentScreen.setOpen(false);
 			questScreen.setOpen(false);
+			abilityScreen.setOpen(false);
 			setOpen(false);
 			counter[0] = 0;
 		} 
@@ -140,22 +164,28 @@ public class StatusScreenController {
 		}
 		
 			
-		
-		if(getInventoryScreen().isOpen() && !equipmentScreen.isOpen() && !questScreen.isOpen())
+		//Updates the currently open screen
+		if(getInventoryScreen().isOpen() && !equipmentScreen.isOpen() && !questScreen.isOpen() && !abilityScreen.isOpen())
 			getInventoryScreen().Update();
-		if(!getInventoryScreen().isOpen() && equipmentScreen.isOpen() && !questScreen.isOpen())
+		if(!getInventoryScreen().isOpen() && equipmentScreen.isOpen() && !questScreen.isOpen() && !abilityScreen.isOpen())
 			equipmentScreen.Update();
-		if(!getInventoryScreen().isOpen() && !equipmentScreen.isOpen() && questScreen.isOpen())
+		if(!getInventoryScreen().isOpen() && !equipmentScreen.isOpen() && questScreen.isOpen() && !abilityScreen.isOpen())
 			questScreen.Update();
+		if(!getInventoryScreen().isOpen() && !equipmentScreen.isOpen() && !questScreen.isOpen() && abilityScreen.isOpen())
+			abilityScreen.Update();
 	}
 	
 	public void Draw(GraphicsContext gc) {
-		if(getInventoryScreen().isOpen() && !equipmentScreen.isOpen() && !questScreen.isOpen())
+		
+		//Draws the currently open screen
+		if(getInventoryScreen().isOpen() && !equipmentScreen.isOpen() && !questScreen.isOpen() && !abilityScreen.isOpen())
 			getInventoryScreen().Draw(gc);
-		if(!getInventoryScreen().isOpen() && equipmentScreen.isOpen() && !questScreen.isOpen())
+		if(!getInventoryScreen().isOpen() && equipmentScreen.isOpen() && !questScreen.isOpen() && !abilityScreen.isOpen())
 			equipmentScreen.Draw(gc);
-		if(!getInventoryScreen().isOpen() && !equipmentScreen.isOpen() && questScreen.isOpen())
+		if(!getInventoryScreen().isOpen() && !equipmentScreen.isOpen() && questScreen.isOpen() && !abilityScreen.isOpen())
 			questScreen.Draw(gc);
+		if(!getInventoryScreen().isOpen() && !equipmentScreen.isOpen() && !questScreen.isOpen() && abilityScreen.isOpen())
+			abilityScreen.Draw(gc);
 	}
 
 	/**

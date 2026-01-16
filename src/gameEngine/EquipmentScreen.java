@@ -21,6 +21,7 @@ public class EquipmentScreen extends StatusScreen{
 		//Sets the offsets for the Equipment Screen
 		super.setWidthOffset(0);
 		super.setHeightOffset(40);
+		
 		//Sets the Background Image
 		try {
 			equipmentScreen = ImageIO.read(new File("Resources/Images/UI/EquipmentScreen.png"));

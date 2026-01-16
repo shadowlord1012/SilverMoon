@@ -167,8 +167,16 @@ public class Player extends Entity{
 	
 	private void useAbility(World w) {
 		
+		// gets the current ability the player is using
 		if(KeyHandlerController.UseAbility && !currentAbility.IsOnCoolDown()) {
-			System.out.println("Ability in slot 0: " + currentAbility.getName());
+			
+			// checks if the player has enough magic current to use the ability
+			if(this.getStatusByName("magiccurrent")-currentAbility.getMagicCost() < 0) {
+				return;
+			}
+			
+			// reduces the magic current by the cost of the ability
+			this.changeStatusByPair("magiccurrent",-currentAbility.getMagicCost());
 			
 			// resets the cooldown counter to 0 to use the ability
 			currentAbility.getCooldown()[0] = 0; 

@@ -92,6 +92,7 @@ public class Entity {
 		public void SetRow(int value) {renderingCounter[2] = value;}
 		public void setPosition(Vector2 value) {Position = value;}
 		public void setSpriteSheetPath(String value ) { spriteSheetPath = value;}
+		public void setStatusByName(String key, double value) { status.put(key, value);}
 		
 		
 		/**

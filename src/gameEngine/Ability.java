@@ -79,6 +79,8 @@ public class Ability{
 	public boolean IsActive() {return isActive;}
 	public int[] getCooldown() {return cooldown;}
 	public void setCooldown(int[] value) {cooldown = value;}
+	public void setMagicCost(int value) {magicCost = value;}
+	public int getMagicCost() {return magicCost;}
 	
 	public int getMaxDuration() {
 		return maxDuration;
@@ -171,13 +173,7 @@ public class Ability{
 			{
 				renderingCounter[2] = 1;
 				position.X -= 5;
-			}
-			
-			System.out.println("Ability Position: "+position.X+", "+position.Y);
-			System.out.println("Ability Direction: "+direction);
-			System.out.println("Image Counter: "+renderingCounter[1]);
-			
-			
+			}	
 		}
 		
 	}
