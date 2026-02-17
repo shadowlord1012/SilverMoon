@@ -19,9 +19,9 @@ public class Engine implements Runnable{
 	private String worldName = "Map1";
 	private Player player;
 	private GraphicsController graphics;
+	private UpdateController updateController;
 	private Audio audio;
 	//private Map<String,Item> itemDirectory = new HashMap<>();
-	private int counter;
 	
 	private volatile boolean running = true;
 	private long lastTime = System.nanoTime();
@@ -93,6 +93,7 @@ public class Engine implements Runnable{
 			player.setCurrentAbility(player.getUsableAbilities()[0]);
 			//creates the graphics controller
 			graphics = new GraphicsController(gameWorldDirectory,player);
+			updateController = new UpdateController();
 
 		}catch(Exception e) {e.printStackTrace();}
 
@@ -114,37 +115,7 @@ public class Engine implements Runnable{
 	
 	public void Update() {
 		
-		
-		//updates the world
-		if(gameWorldDirectory.containsKey(worldName)) 
-			gameWorldDirectory.get(worldName).Update(worldName);
-		
-		//updates the player
-		player.Update(gameWorldDirectory.get(worldName));
-		
-		//updates the collision in relevance to the player
-		Collision.tileCollision(gameWorldDirectory.get(worldName).currentLevel(Global.CURRENT_LEVEL).getTileMap(Global.TILE_MAP_NAME), player);
-		Collision.teleportLocationCollision(gameWorldDirectory.get(worldName).currentLevel(Global.CURRENT_LEVEL).getTileMap(Global.TILE_MAP_NAME), player);
-		gameWorldDirectory.get(worldName).currentLevel(Global.CURRENT_LEVEL).getItemList().forEach(item -> {
-			Collision.ItemCollision(player, item);
-		});
-		
-		counter++;
-		if(counter >= 50)
-			counter = 50;
-		
-		if(KeyHandlerController.UpDown[0] && counter == 50) {
-			player.changeStatusByPair("magiccurrent", -0.5);
-			counter = 0;
-		}
-		if(KeyHandlerController.UpDown[1]&& counter == 50) {
-			player.changeStatusByPair("magiccurrent", 0.5);
-			counter = 0;
-		}
-			
-		
-		//updates the graphic controller
-		graphics.Update(gameWorldDirectory, player);
+		updateController.Update(gameWorldDirectory, player, worldName, graphics, audio);		
 		
 	}
 	

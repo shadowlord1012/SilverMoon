@@ -40,21 +40,6 @@ public class TileMap {
 	
 	public Map<String,Tile[][]> getTileLayers() {return tileLayers;}
 	
-	public Tile[][] getTilesOnMapnbylayer(String layer) {
-		switch(layer.toLowerCase()) 
-		{
-			case "bottom":
-				return bottomTileLayer;
-			case "middle":
-				return middleTileLayer;
-			case "top":
-				return topTileLayer;
-			case "transport":
-				return transportLayer;
-			default:
-				return null;
-		}
-	}
 	
 	public TileMap() {
 		xTiles = 0;
@@ -81,29 +66,6 @@ public class TileMap {
 		yTiles = y;
 	}
 	
-	public void LoadTileMapData(Tile tile, Vector2 position, String layerName) {
-		tileLayers.remove(layerName);
-		
-		switch(layerName.toLowerCase())
-		{
-		case "bottom":
-			bottomTileLayer[(int)position.X][(int)position.Y] = tile;
-				tileLayers.put(layerName, bottomTileLayer);
-			break;
-		case "middle":
-			middleTileLayer[(int)position.X][(int)position.Y] = tile;
-				tileLayers.put(layerName, middleTileLayer);
-			break;
-		case "top":
-			topTileLayer[(int)position.X][(int)position.Y] = tile;
-				tileLayers.put(layerName, topTileLayer);
-			break;
-		case "transport":
-			transportLayer[(int)position.X][(int)position.Y] = tile;
-				tileLayers.put(layerName, transportLayer);
-			break;
-		}
-	}
 	
 	public void LoadTileSetImage() {
 		
@@ -116,9 +78,5 @@ public class TileMap {
 				}
 			}
 		});
-	}
-	
-	public void Update() {
-		
 	}
 }

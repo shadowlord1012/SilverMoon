@@ -117,9 +117,29 @@ public class Vector2 {
 		return new Vector2(vOne.X-vTwo.X,vOne.Y - vTwo.Y);
 	}
 	
+	/** Returns the angle of the vector in radians
+	 * @return
+	 */
 	public double heading2() {
 		return Math.atan2(Y,X);
 	}
+	
+	/**
+	 * Returns a vector with the points of 0,0
+	 * @return
+	 */
+	public static Vector2 Zero() {
+		return new Vector2(0,0);
+	}
+	
+	/**
+	 * Returns a vector with the points of 1,1
+	 * @return
+	 */
+	public static Vector2 One() {
+		return new Vector2(1,1);
+	}
+	
 	
 	@Override
 	public String toString() {

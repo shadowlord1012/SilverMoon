@@ -8,4 +8,5 @@ module Sliver_Moon {
 	
 	opens application to javafx.graphics, javafx.fxml;
 	opens gameEngine to com.google.gson;
+	opens InformationEditor to com.google.gson, javafx.graphics, javafx.fxml;
 }

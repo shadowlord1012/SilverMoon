@@ -41,12 +41,4 @@ public class World {
 			levelList.add(level);
 	}
 	
-	/**
-	 * Updates the Level in the world 
-	 * @param currentMap
-	 */
-	public void Update(String currentMap) {
-		levelList.forEach(e -> e.Update(currentMap));
-	}
-	
 }

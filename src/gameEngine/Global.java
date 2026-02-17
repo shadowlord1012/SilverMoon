@@ -30,6 +30,7 @@ public class Global {
 	public static KeyCode ABILITY_ACTION = KeyCode.C; // Ability Action key
 	public static KeyCode ABILITY_ALTERNATE = KeyCode.X; // Ability Alternate key
 	public static final DataLoader DATA_LOADER = new DataLoader(); // Global Data Loader
+	public static String CURRENT_WORLD = "worldOne";
 	public static String CURRENT_LEVEL = "levelOne";
 	public static String TILE_MAP_NAME	 = "Map1";
 	public static boolean TILE_MAP_LOADED = false;

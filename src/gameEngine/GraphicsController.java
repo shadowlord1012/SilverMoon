@@ -12,6 +12,7 @@ public class GraphicsController {
 	private HeadsUpDisplay hud;
 	//private List<Npc> npc;
 	//private List<Monster> monster;
+	private int[] currentFrameCOunter = {0,0};
 	
 	public GraphicsController(Map<String,World> worldRef, Player playerRef) {
 		world = worldRef;
@@ -27,85 +28,105 @@ public class GraphicsController {
 	
 	public void Draw(GraphicsContext gc) {
 		world.forEach((name,level) ->{
-			
-			int xTiles = level.currentLevel(Global.CURRENT_LEVEL).getTileMap(Global.TILE_MAP_NAME).getXTiles();
-			int yTiles = level.currentLevel(Global.CURRENT_LEVEL).getTileMap(Global.TILE_MAP_NAME).getYTiles();
-			
-			level.currentLevel(Global.CURRENT_LEVEL) //Gets the level of the world
-			.getTileMap(Global.TILE_MAP_NAME) //gets the map of the level
+			if(name.equals("Map1")) {
+				int xTiles = level.currentLevel(Global.CURRENT_LEVEL).getTileMap(Global.TILE_MAP_NAME).getXTiles();
+				int yTiles = level.currentLevel(Global.CURRENT_LEVEL).getTileMap(Global.TILE_MAP_NAME).getYTiles();
+				
+				level.currentLevel(Global.CURRENT_LEVEL) //Gets the level of the world
+				.getTileMap(Global.TILE_MAP_NAME) //gets the map of the level
+					.getTileLayers() //gets all the layers in that map on the level
+					.forEach((layer,map) -> {
+						
+						//Draw the bottom layer first
+						if(layer.toLowerCase().equals("bottom"))
+						{
+							for(int i = 0; i < xTiles; i++) {
+								for(int j = 0; j < yTiles; j++) {
+									if(map[i][j] != null) {
+										if(map[i][j].IsActive()) {
+											
+											currentFrameCOunter[0]++;
+											if(currentFrameCOunter[0] >= 10) {
+												currentFrameCOunter[0] = 0;
+												map[i][j].getCurrentFrame().X++;
+											}
+											
+											map[i][j].ChangeImage();
+											gc.drawImage(map[i][j].getImg(), 
+													(i*map[i][j].getWidth()*Global.SCALE)+Global.CAMERA.Position.X,
+													(j*map[i][j].getHeight()*Global.SCALE)+Global.CAMERA.Position.Y,
+													map[i][j].getWidth()*Global.SCALE,
+													map[i][j].getHeight()*Global.SCALE);
+										}
+										else {
+											gc.drawImage(map[i][j].getImg(), 
+													(i*map[i][j].getWidth()*Global.SCALE)+Global.CAMERA.Position.X,
+													(j*map[i][j].getHeight()*Global.SCALE)+Global.CAMERA.Position.Y,
+													map[i][j].getWidth()*Global.SCALE,
+													map[i][j].getHeight()*Global.SCALE);
+										}
+									}
+								}
+							}
+						}
+						
+						//Draws the middle layer of the tile map
+						if(layer.toLowerCase().equals("middle"))
+						{
+							for(int i = 0; i < xTiles; i++) {
+								for(int j = 0; j < yTiles; j++) {
+									if(map[i][j] != null) {
+										gc.drawImage(map[i][j].getImg(), 
+												(i*map[i][j].getWidth()*Global.SCALE)+Global.CAMERA.Position.X,
+												(j*map[i][j].getHeight()*Global.SCALE)+Global.CAMERA.Position.Y,
+												map[i][j].getWidth()*Global.SCALE,
+												map[i][j].getHeight()*Global.SCALE);
+									}
+								}
+							}
+						}
+						//Draw transparent layer
+						if(layer.toLowerCase().equals("transport"))
+						{
+							for(int i = 0; i < xTiles; i++) {
+								for(int j = 0; j < yTiles; j++) {
+									if(map[i][j] != null) {
+										gc.drawImage(map[i][j].getImg(), 
+												(i*map[i][j].getWidth()*Global.SCALE)+Global.CAMERA.Position.X,
+												(j*map[i][j].getHeight()*Global.SCALE)+Global.CAMERA.Position.Y,
+												map[i][j].getWidth()*Global.SCALE,
+												map[i][j].getHeight()*Global.SCALE);
+									}
+								}
+							}
+						}
+						
+						
+						
+					});
+				
+				//Draw the player on the screen
+				player.Draw(gc);
+				
+				//TODO: Draw NPCs and Monsters on the level
+				
+	
+				//Draw items on the level
+				level.currentLevel(Global.CURRENT_LEVEL).DrawItems(gc);
+				
+				//Draw player's current ability if active and there is an ability to draw
+				if(player.getCurrentAbility() != null) {
+					if(player.getCurrentAbility().IsActive()) {
+						player.getCurrentAbility().Draw(gc);
+					}
+				}
+				
+				
+				level.currentLevel(Global.CURRENT_LEVEL)
+				.getTileMap(Global.TILE_MAP_NAME) //gets the map of the level
 				.getTileLayers() //gets all the layers in that map on the level
 				.forEach((layer,map) -> {
-					
-					//Draw the bottom layer first
-					if(layer.toLowerCase().equals("bottom"))
-					{
-						for(int i = 0; i < xTiles; i++) {
-							for(int j = 0; j < yTiles; j++) {
-								if(map[i][j] != null) {
-									gc.drawImage(map[i][j].getImg(), 
-											(i*map[i][j].getWidth()*Global.SCALE)+Global.CAMERA.Position.X,
-											(j*map[i][j].getHeight()*Global.SCALE)+Global.CAMERA.Position.Y,
-											map[i][j].getWidth()*Global.SCALE,
-											map[i][j].getHeight()*Global.SCALE);
-								}
-							}
-						}
-					}
-					
-					//Draws the middle layer of the tile map
-					if(layer.toLowerCase().equals("middle"))
-					{
-						for(int i = 0; i < xTiles; i++) {
-							for(int j = 0; j < yTiles; j++) {
-								if(map[i][j] != null) {
-									gc.drawImage(map[i][j].getImg(), 
-											(i*map[i][j].getWidth()*Global.SCALE)+Global.CAMERA.Position.X,
-											(j*map[i][j].getHeight()*Global.SCALE)+Global.CAMERA.Position.Y,
-											map[i][j].getWidth()*Global.SCALE,
-											map[i][j].getHeight()*Global.SCALE);
-								}
-							}
-						}
-					}
-					//Draw transparent layer
-					if(layer.toLowerCase().equals("transport"))
-					{
-						for(int i = 0; i < xTiles; i++) {
-							for(int j = 0; j < yTiles; j++) {
-								if(map[i][j] != null) {
-									gc.drawImage(map[i][j].getImg(), 
-											(i*map[i][j].getWidth()*Global.SCALE)+Global.CAMERA.Position.X,
-											(j*map[i][j].getHeight()*Global.SCALE)+Global.CAMERA.Position.Y,
-											map[i][j].getWidth()*Global.SCALE,
-											map[i][j].getHeight()*Global.SCALE);
-								}
-							}
-						}
-					}
-					
-					
-					//Draw the player on the screen
-					player.Draw(gc);
-					
-					
-					
-					//TODO: once monsters are to be added in.
-					/*
-					monster.forEach(e -> {
-						if(e.IsActive)
-						{
-							e.Draw(gc);
-						}
-					});
-					npc.forEach(e -> {
-						if(e.IsActive)
-						{
-							e.Draw(gc);
-						}
-					});
-					*/
-					
-					//Draw the top layer of the map
+					//Draw the top layer last
 					if(layer.toLowerCase().equals("top"))
 					{
 						for(int i = 0; i < xTiles; i++) {
@@ -121,15 +142,6 @@ public class GraphicsController {
 						}
 					}
 				});
-			
-			//Draw items on the level
-			level.currentLevel(Global.CURRENT_LEVEL).DrawItems(gc);
-			
-			//Draw player's current ability if active and there is an ability to draw
-			if(player.getCurrentAbility() != null) {
-				if(player.getCurrentAbility().IsActive()) {
-					player.getCurrentAbility().Draw(gc);
-				}
 			}
 		});
 		

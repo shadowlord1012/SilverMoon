@@ -60,14 +60,6 @@ public class Level {
 			this.tileMaps.put(map.getName(), map);
 	}
 	
-	/**
-	 * Updates the Levels maps
-	 * @param currentMap
-	 */
-	public void Update(String currentMap) {
-		this.tileMaps.get(currentMap).Update();
-	}
-	
 	public void DrawItems(GraphicsContext gc) {
 		getItemList().forEach(e -> {
 			if(e.getImage() != null)
